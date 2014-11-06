@@ -2,7 +2,10 @@
 \usepackage[utf8]{inputenc}
 \usepackage[german]{babel}
 \usepackage{amsmath}
+\usepackage[capbesideposition={top,outside},facing=yes,capbesidesep=quad]{floatrow}
+\usepackage{wrapfig}
 \usepackage{amsfonts}
+\usepackage{fontenc}
 \usepackage{amssymb}
 \usepackage{graphicx}
 \graphicspath{ {/home/alex/github/BWL2/doc/images/} }
@@ -18,7 +21,7 @@
 \newpage
 
 
-\section{Praktikum 1}
+\section{Erstes Praktikum}
 \subsection{Architektur\"ubersicht}
 Wir brauchen als Komponenten eine Warenverwaltung, eine Kundenverwaltung, eine Rechnungsverwaltung und eine Businesslogic mit einer Web-GUI.
 
@@ -37,20 +40,26 @@ Zur Debate stand, welche Programmiersprache bzw. welche Scriptsprache, welchen W
 	\caption{Vergleich zwischen Rails und PHP}
 	\cite{tbray}
 	\label{fig:vergleich}
-	\includegraphics[scale=0.5]{complang}
+	\includegraphics[scale=0.4]{complang}
 \end{figure}
 
-In Abbildung \ref{fig:vergleich} zu sehen, ist ein Vergleich zwischen Java, Ruby on Rails und PHP. Wir werden aufgrund der Entwicklungsgeschwindigkeit, der Wartbarkeit und dem Grund, dass wir Ruby in Programmieren I verwendeten, Ruby on Rails verwenden. Offen bleibt nun, welches Datenbankmanagementsystem und welchen Webserver wir verwenden. Wir sind uns derzeit beim DBMS uneinig ob wir MySQL oder SQLite verwenden.
+In Abbildung \ref{fig:vergleich} zu sehen, ist ein Vergleich zwischen Java, Ruby on Rails und PHP. Wir werden aufgrund der Entwicklungsgeschwindigkeit, der Wartbarkeit und dem Grund, dass wir Ruby in Programmieren I verwendeten, Ruby on Rails verwenden. Offen bleibt nun, welches Datenbankmanagementsystem und welchen Webserver wir verwenden. Da Rails nativ einen Webserver bereitstellt, werden wir diesen verwenden. Die Anbindung an ein DMBS gestaltet Rails auch problemlos. Wir stellten uns SQLite und MySQL zur Option. Nach einigen Artikeln, welche diese Vergleichen f\"allt auf, dass MySQL eher f\"ur gro{\ss}e Anwendungen geignet sind, welche auf Skalierbarkeit und Performanz Wert legen. SQLite hingegen soll sehr gut f\"ur Prototypen von Datenbanken, eine schnelle Entwicklung geeignet sein. Hierbei legt SQLite keinen Wert auf Nutzerverwaltung und Skalierbarkeit. Nachteile von MySQL ist, dass es eine h\"ohere Komplexit\"at in der Einrichtung aufweist. Beide verwenden offensichtlicher weise SQL. Letztendlich haben wir uns f\"ur MySQL entschieden, da wir den Umgang mit einem schwergewichtigen DBMS \"ueben m\"ochten.
 
 \subsection{Design der Datenbank}
+Wir wurden gebeten eine Ware zu vertreiben, welche aus anderen Waren zusammengesetzt werden kann. Dieses Modell wird dadurch eine Rekursion enthalten, da wir die Bauteile der Produkte eventuell ebenfalls vertreiben w\"urden. Interessant ist also die Ware mit ihrem Namen, einer Beschreibung, einem Bild der Ware und ihrer Zusammensetzung.
 
-\subsection{Dokumentation}
+\begin{wrapfigure}{R}{0.5\textwidth}
+  	\begin{center}
+    	\includegraphics[scale=0.6]{databaseWare}
+ 	 \end{center}
+  	\caption{Zu sehen ist hier das Modell f\"ur die Ware und deren Bestandteile. Durch die die Kardinatlit\"at m zu n k\"onnen Waren sowohl aus mehreren, anderen Waren bestehen, als auch in welchen vorkommen.}
+\end{wrapfigure}
 
-\subsection{Offene Fragen}
-\begin{itemize}
-	\item MySQL oder SQLite?
-\end{itemize}
-
+\section{Zweites Praktikum}
+\section{Drittes Praktikum}
+\section{Viertes Praktikum}
+\section{Offene Fragen}
+\subsection{MySQL oder SQLite?}
 \bibliographystyle{alpha}
 \bibliography{./references}
 \end{document}
