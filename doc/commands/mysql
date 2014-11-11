@@ -1,0 +1,10 @@
+# starten als user root mit password aufforderung
+mysql -u root -p
+
+# zeig alle tablen
+show tables;
+
+# zeig die domaenen einer table
+desc pferde;
+
+
