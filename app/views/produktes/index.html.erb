@@ -1,0 +1,42 @@
+<h1>Spaceships</h1>
+
+<%= form_tag(produktes_path, :method => "get", id: "search-form") do |i|%>
+    <%= text_field_tag :search, params[:search], placeholder: "Suche nach Ware" %>
+    <%= submit_tag "Suche", :name => nil %>
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Beschreibung</th>
+      <th>Preis</th>
+      <th>Stueckzahl</th>
+      <th>Datum von</th>
+      <th>Datum bis</th>
+      <th>Bild</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @produktes.each do |produkte| %>
+      <tr>
+        <td><%= produkte.name %></td>
+        <td><%= produkte.beschreibung %></td>
+        <td><%= produkte.preis %></td>
+        <td><%= produkte.stueckzahl %></td>
+        <td><%= produkte.datumvon %></td>
+        <td><%= produkte.datumbis %></td>
+        <td><%= image_tag produkte.bild.url %>
+        <td><%= link_to 'mehr', produkte %></td>
+        <td><%= link_to 'bearbeiten', edit_produkte_path(produkte) %></td>
+        <td><%= link_to 'entfernen', produkte, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Neues Produkt', new_produkte_path %>

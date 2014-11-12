@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @produkte.name %>
+</p>
+
+<p>
+  <strong>Beschreibung:</strong>
+  <%= @produkte.beschreibung %>
+</p>
+
+<p>
+  <strong>Preis:</strong>
+  <%= @produkte.preis %>
+</p>
+
+<p>
+  <strong>Stueckzahl:</strong>
+  <%= @produkte.stueckzahl %>
+</p>
+
+<p>
+  <strong>Datumvon:</strong>
+  <%= @produkte.datumvon %>
+</p>
+
+<p>
+  <strong>Datumbis:</strong>
+  <%= @produkte.datumbis %>
+</p>
+
+<p>
+  <strong>Bild:</strong>
+  <%= image_tag @produkte.bild.url(:small) %>
+</p>
+
+<%= link_to 'Edit', edit_produkte_path(@produkte) %> |
+<%= link_to 'Back', produktes_path %>
