@@ -21,8 +21,11 @@
 \tableofcontents
 \newpage
 
-
 \section{Erstes Praktikum}
+
+\subsection{Wahl unserer Ware}
+Wir haben uns darauf geeinigt Spaceships, sprich Raumschiffe zu vertreiben. Diese werden aus seperat Lieferbaren Produkten wie beispiels weise Laserkanonen oder Warpantriebseinheiten zusammengesetzt. Man kann sich zudem ganze Batalionen von Spaceships zum Sparpaket holen.
+
 \subsection{Architektur\"ubersicht}
 Wir brauchen als Komponenten eine Warenverwaltung, eine Kundenverwaltung, eine Rechnungsverwaltung und eine Businesslogic mit einer Web-GUI.
 
@@ -48,24 +51,25 @@ In Abbildung \ref{fig:vergleich} zu sehen, ist ein Vergleich zwischen Java, Ruby
 
 \subsection{Design der Datenbank}
 \label{sec:dbdesign}
-Wir wurden gebeten eine Ware zu vertreiben, welche aus anderen Waren zusammengesetzt werden kann. Dieses Modell wird dadurch eine Rekursion enthalten, da wir die Bauteile der Produkte eventuell ebenfalls vertreiben w\"urden. Interessant ist also die Ware mit ihrem Namen, einer Beschreibung, einem Bild der Ware und ihrer Zusammensetzung.
+Wir wurden gebeten eine Ware zu vertreiben, welche aus anderen Waren zusammengesetzt werden kann. Dieses Modell wird dadurch eine Rekursion enthalten, da wir die Bauteile der Produkte eventuell ebenfalls vertreiben w\"urden. Interessant ist also die Ware mit ihrem Namen, einer Beschreibung, einem Bild der Ware und ihrer Zusammensetzung. Hierf\"ur verwenden wir eine rekursive Relation von der Ware auf die Ware selbst. Diese Relation 
 
 \begin{wrapfigure}{R}{0.5\textwidth}
   	\begin{center}
     	\includegraphics[scale=0.6]{databaseWare}
  	 \end{center}
-  	\caption{Zu sehen ist hier das Modell f\"ur die Ware und deren Bestandteile. Durch die die Kardinatlit\"at m zu n k\"onnen Waren sowohl aus mehreren, anderen Waren bestehen, als auch in welchen vorkommen.}
+   \caption{ERM der Ware und ihrer Struktur}
 \end{wrapfigure}
 
 \subsection{Dokumentation}
 
 \subsubsection{Installation der Software Komponenten unter Arch Linux}
-Das Installieren der Softwarekomponenten hat sich unter Linux als \"au{\ss}erst einfach erwiesen. Unter der Distribution Arch Linux musste man zun\"achst MySQL, nodejs, ruby und die Gems von Ruby installieren. Die ersten drei waren mit dem Befehl \texttt{sudo pacman -S mysql nodejs ruby} abgehandelt. F\"ur MySQL mussten wir  zus\"atzlich \texttt{mysql\_secure\_installation} eingeben um das Passwort von root zu \"andern. Nun muss man noch den Daemon mit \texttt{sudo systemctl start mysqld} starten. Wenn man m\"ochte, dass der Daemon beim n\"achsten hochfahren des Rechners automatisch startet, gibt man zus\"atzlich \texttt{sudo systemctl enable mysqld} ein. F\"ur die abschlie{\ss}ende Installation der gems nutzten wir \texttt{gem install mysql rails}. Um Ruby on Rails Bedienbarkeit zu verbessern haben wir zus\"atzlich die PATH Variable erweitert.
+Das Installieren der Softwarekomponenten hat sich unter Linux als \"au{\ss}erst einfach erwiesen. Unter der Distribution Arch Linux musste man zun\"achst MySQL, nodejs, ruby und die Gems von Ruby installieren. Die ersten drei waren mit dem Befehl \texttt{sudo pacman -S mysql nodejs ruby} abgehandelt. F\"ur MySQL mussten wir  zus\"atzlich \texttt{mysql\_secure\_installation} eingeben um das Passwort von root zu \"andern. Nun muss man noch den Daemon mit \texttt{sudo systemctl start mysqld} starten. Wenn man m\"ochte, dass der Daemon beim n\"achsten hochfahren des Rechners automatisch startet, gibt man zus\"atzlich \texttt{sudo systemctl enable mysqld} ein. F\"ur die abschlie{\ss}ende Installation der gems nutzten wir \texttt{gem install mysql rails paperclip}. 
 
-\subsubsection{Installation der Software Komponenten unter Windows}
+\subsubsection{Umsetzung der Datenbank}
+Um eine Erzeugung einer Datenbank wird sich in nur indirekt gek\"ummert, da Rails die Anbindung an Rails vollst\"andig \"ubernimmt. Ebenfalls arbeitet Rails intern mit Relationen, weshalb keine Fremdschl\"ussel in der Datenbank auftauchen. Desweiteren gestattet uns Rails durch \texttt{belongs\_to} und \texttt{has\_many} in den Modellen diese Relationen zu gestallten. Bilder werden in unserer Datenbank mittels Name, Typ, Gr\"o{\ss}e und dem letzten Update gespeichert. F\"ur die Verwaltung dieser haben wir uns f\"ur das gem Paperclip entschieden. 
 
-\subsubsection{Erstellen der Datenbank}
-Das Erstellen einer Datenbank erfolgt in Ruby on Rails implizit. Durch das Generieren von Models werden die Tabellen automatisch generiert. Hierf\"ur verwenden wir den Generator von Rails. Mit \texttt{./rake db:create db:migrate} werden dann die erstellten Models in die Datenbank eingetragen.
+\subsubsection{Nutzeroberfl\"ache}
+Die Nutzeroberfl\"ache haben wir uns durch generieren lassen. Eine Validierung der Daten bei der Warenerzeugung findet in den Modellen statt. Wenn diese fehlschl\"agt, wird der Nutzer aufgefordert seine Eingabe zu korrigeren. Die Validierung \"uberpr\"uft lediglich ob die Daten f\"ur das Anlegen neuer Waren vorhanden sind.  
 
 \section{Zweites Praktikum}
 
