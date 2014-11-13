@@ -1,10 +1,10 @@
 class CreateProduktes < ActiveRecord::Migration
   def change
     create_table :produktes do |t|
-      t.string :name
+      t.string :name, :null => false
       t.string :beschreibung
-      t.integer :preis
-      t.integer :stueckzahl
+      t.integer :preis, :null => false
+      t.integer :stueckzahl, :null => false
       t.date :datumvon
       t.date :datumbis
 

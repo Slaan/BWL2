@@ -28,6 +28,7 @@ gem 'spring',        group: :development
 
 # Use paperclip for image upload and storage
 gem 'paperclip'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

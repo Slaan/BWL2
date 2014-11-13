@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex main"] 1415782861 "main.aux" "main.bbl" "main" 1415789954
+["bibtex main"] 1415782861 "main.aux" "main.bbl" "main" 1415806972
   "./references.bib" 1414342847 142 6a0cd780b344eb6df0695407625900d8 ""
   "/usr/share/texmf-dist/bibtex/bst/base/alpha.bst" 1407968443 23907 a5f93555796fb564b924339521f10a7c ""
   "main.aux" 1415789954 2044 62753f3ce8ce2ea935ee168a1e812719 ""
   "main.bcf" 0 -1 0 ""
   (generated)
-  "main.bbl"
   "main.blg"
-["pdflatex"] 1415789954 "main.tex" "main.pdf" "main" 1415789954
+  "main.bbl"
+["pdflatex"] 1415789954 "main.tex" "main.pdf" "main" 1415806972
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1407968436 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1407968433 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1407968433 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -97,7 +97,7 @@
   "main.tex" 1415789953 5077 6bdc2ded2adaabd805ae2d5a34813fe8 ""
   "main.toc" 1415789954 920 55a8139b6e328924b367ae308e62bf77 ""
   (generated)
-  "main.log"
-  "main.aux"
   "main.toc"
+  "main.aux"
   "main.pdf"
+  "main.log"

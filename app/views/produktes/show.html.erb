@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <%= image_tag @produkte.bild.url :medium %>
+</p>
+
+<p>
   <strong>Name:</strong>
   <%= @produkte.name %>
 </p>
@@ -30,10 +34,5 @@
   <%= @produkte.datumbis %>
 </p>
 
-<p>
-  <strong>Bild:</strong>
-  <%= image_tag @produkte.bild.url(:small) %>
-</p>
-
-<%= link_to 'Edit', edit_produkte_path(@produkte) %> |
-<%= link_to 'Back', produktes_path %>
+<%= link_to 'bearbeiten', edit_produkte_path(@produkte) %> |
+<%= link_to 'zurueck', produktes_path %>
