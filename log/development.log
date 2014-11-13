@@ -4510,3 +4510,510 @@ Processing by ProduktesController#show as HTML
   [1m[36mProdukte Load (0.6ms)[0m  [1mSELECT  `produktes`.* FROM `produktes`  WHERE `produktes`.`id` = 6 LIMIT 1[0m
   Rendered produktes/show.html.erb within layouts/application (1.7ms)
 Completed 200 OK in 40ms (Views: 36.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/produktes" for 127.0.0.1 at 2014-11-13 12:30:21 +0100
+Processing by ProduktesController#index as HTML
+  [1m[35mProdukte Load (0.3ms)[0m  SELECT `produktes`.* FROM `produktes`
+  Rendered produktes/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 87ms (Views: 86.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/produktes/5" for 127.0.0.1 at 2014-11-13 12:30:26 +0100
+Processing by ProduktesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProdukte Load (0.5ms)[0m  [1mSELECT  `produktes`.* FROM `produktes`  WHERE `produktes`.`id` = 5 LIMIT 1[0m
+  Rendered produktes/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 40ms (Views: 37.8ms | ActiveRecord: 0.5ms)
+  [1m[36m (53.0ms)[0m  [1mDROP DATABASE IF EXISTS `spaceshop_development`[0m
+  [1m[35m (5.7ms)[0m  DROP DATABASE IF EXISTS `spaceshop_test`
+  [1m[36m (0.4ms)[0m  [1mCREATE DATABASE `spaceshop_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`[0m
+  [1m[35m (0.3ms)[0m  CREATE DATABASE `spaceshop_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (35.3ms)[0m  [1mCREATE TABLE `besteht_aus` (`id` int(11) auto_increment PRIMARY KEY, `ganzes_id` int(11) NOT NULL, `teil_id` int(11) NOT NULL, `bestandteile` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (32.4ms)[0m  CREATE TABLE `produktes` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `beschreibung` varchar(255), `preis` int(11), `stueckzahl` int(11), `datumvon` date, `datumbis` date, `created_at` datetime, `updated_at` datetime, `bild_file_name` varchar(255), `bild_content_type` varchar(255), `bild_file_size` int(11), `bild_updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (33.8ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (50.7ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36m (0.5ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (5.5ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20141112163400')
+  [1m[36m (4.7ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20141112103831')[0m
+  [1m[35m (4.5ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20141112110254')
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-13 16:25:42 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ProduktesController#index as HTML
+  [1m[35mProdukte Load (0.5ms)[0m  SELECT `produktes`.* FROM `produktes`
+  Rendered produktes/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 93ms (Views: 79.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-13 16:25:42 +0100
+Processing by ProduktesController#index as HTML
+  [1m[36mProdukte Load (0.4ms)[0m  [1mSELECT `produktes`.* FROM `produktes`[0m
+  Rendered produktes/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 41ms (Views: 39.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-13 16:25:42 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-13 16:25:42 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-13 16:25:42 +0100
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-13 16:25:42 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-13 16:25:42 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-13 16:25:42 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-13 16:25:42 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-13 16:25:42 +0100
+
+
+Started GET "/produktes/new" for 127.0.0.1 at 2014-11-13 16:25:45 +0100
+Processing by ProduktesController#new as HTML
+  Rendered produktes/_form.html.erb (32.2ms)
+  Rendered produktes/new.html.erb within layouts/application (35.7ms)
+Completed 200 OK in 116ms (Views: 112.3ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/produktes" for 127.0.0.1 at 2014-11-13 16:26:14 +0100
+Processing by ProduktesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rUZWc5fvg/2ixyk0ismvbNPwOAScHzsI4Cfi7uwvEXA=", "produkte"=>{"name"=>"Pferd", "beschreibung"=>"schoenes pferd", "preis"=>"1337", "stueckzahl"=>"2", "datumvon(1i)"=>"2014", "datumvon(2i)"=>"11", "datumvon(3i)"=>"13", "datumbis(1i)"=>"2014", "datumbis(2i)"=>"11", "datumbis(3i)"=>"13", "bild"=>#<ActionDispatch::Http::UploadedFile:0x00000004bf2e68 @tempfile=#<Tempfile:/tmp/RackMultipart20141113-14242-1ffu34j>, @original_filename="r92wee.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"produkte[bild]\"; filename=\"r92wee.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Produkte"}
+Command :: file -b --mime '/tmp/bd4a565868e8581b92cd80358e88246e20141113-14242-1tnh9j8.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/bd4a565868e8581b92cd80358e88246e20141113-14242-16unrq3.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/bd4a565868e8581b92cd80358e88246e20141113-14242-16unrq3.jpg[0]'
+Command :: convert '/tmp/bd4a565868e8581b92cd80358e88246e20141113-14242-16unrq3.jpg[0]' -auto-orient -resize "400x400>" '/tmp/bd4a565868e8581b92cd80358e88246e20141113-14242-16unrq320141113-14242-1lv7rcl'
+Command :: file -b --mime '/tmp/bd4a565868e8581b92cd80358e88246e20141113-14242-16unrq320141113-14242-1lv7rcl'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/bd4a565868e8581b92cd80358e88246e20141113-14242-16unrq3.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/bd4a565868e8581b92cd80358e88246e20141113-14242-16unrq3.jpg[0]'
+Command :: convert '/tmp/bd4a565868e8581b92cd80358e88246e20141113-14242-16unrq3.jpg[0]' -auto-orient -resize "200x200>" '/tmp/bd4a565868e8581b92cd80358e88246e20141113-14242-16unrq320141113-14242-1xeyx6o'
+Command :: file -b --mime '/tmp/bd4a565868e8581b92cd80358e88246e20141113-14242-16unrq320141113-14242-1xeyx6o'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/bd4a565868e8581b92cd80358e88246e20141113-14242-16unrq3.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/bd4a565868e8581b92cd80358e88246e20141113-14242-16unrq3.jpg[0]'
+Command :: convert '/tmp/bd4a565868e8581b92cd80358e88246e20141113-14242-16unrq3.jpg[0]' -auto-orient -resize "100x100>" '/tmp/bd4a565868e8581b92cd80358e88246e20141113-14242-16unrq320141113-14242-k7jsp5'
+Command :: file -b --mime '/tmp/bd4a565868e8581b92cd80358e88246e20141113-14242-16unrq320141113-14242-k7jsp5'
+  [1m[35m (0.2ms)[0m  BEGIN
+Command :: file -b --mime '/tmp/bd4a565868e8581b92cd80358e88246e20141113-14242-52r3z1.jpg'
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `produktes` (`beschreibung`, `bild_content_type`, `bild_file_name`, `bild_file_size`, `bild_updated_at`, `created_at`, `datumbis`, `datumvon`, `name`, `preis`, `stueckzahl`, `updated_at`) VALUES ('schoenes pferd', 'image/jpeg', 'r92wee.jpg', 27437, '2014-11-13 15:26:14', '2014-11-13 15:26:14', '2014-11-13', '2014-11-13', 'Pferd', 1337, 2, '2014-11-13 15:26:14')[0m
+  [1m[35m (6.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/produktes/1
+Completed 302 Found in 325ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/produktes/1" for 127.0.0.1 at 2014-11-13 16:26:14 +0100
+Processing by ProduktesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProdukte Load (0.4ms)[0m  [1mSELECT  `produktes`.* FROM `produktes`  WHERE `produktes`.`id` = 1 LIMIT 1[0m
+  Rendered produktes/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 39ms (Views: 35.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-13 16:26:14 +0100
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-13 16:26:14 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-13 16:26:14 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-13 16:26:14 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-13 16:26:14 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-13 16:26:14 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-13 16:26:14 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-13 16:26:14 +0100
+
+
+Started GET "/produktes" for 127.0.0.1 at 2014-11-13 16:26:16 +0100
+Processing by ProduktesController#index as HTML
+  [1m[35mProdukte Load (0.6ms)[0m  SELECT `produktes`.* FROM `produktes`
+  Rendered produktes/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 48ms (Views: 47.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/produktes/1" for 127.0.0.1 at 2014-11-13 16:26:22 +0100
+Processing by ProduktesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProdukte Load (0.7ms)[0m  [1mSELECT  `produktes`.* FROM `produktes`  WHERE `produktes`.`id` = 1 LIMIT 1[0m
+  Rendered produktes/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 41ms (Views: 38.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/produktes/1" for 127.0.0.1 at 2014-11-13 16:44:38 +0100
+Processing by ProduktesController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `_bild_post_process_callbacks' for #<Class:0x00000004565370>):
+  app/models/produkte.rb:6:in `<class:Produkte>'
+  app/models/produkte.rb:1:in `<top (required)>'
+  app/controllers/produktes_controller.rb:67:in `set_produkte'
+
+
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.9ms)
+
+
+Started GET "/produktes/" for 127.0.0.1 at 2014-11-13 16:44:45 +0100
+Processing by ProduktesController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `_bild_post_process_callbacks' for #<Class:0x000000043475c0>):
+  app/models/produkte.rb:6:in `<class:Produkte>'
+  app/models/produkte.rb:1:in `<top (required)>'
+  app/controllers/produktes_controller.rb:7:in `index'
+
+
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.0ms)
+
+
+Started GET "/produktes/" for 127.0.0.1 at 2014-11-13 16:45:00 +0100
+Processing by ProduktesController#index as HTML
+  [1m[35mProdukte Load (0.5ms)[0m  SELECT `produktes`.* FROM `produktes`
+  Rendered produktes/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 63ms (Views: 54.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-13 16:45:00 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-13 16:45:00 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-13 16:45:00 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-13 16:45:00 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-13 16:45:00 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-13 16:45:00 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-13 16:45:00 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-13 16:45:00 +0100
+
+
+Started GET "/produktes/new" for 127.0.0.1 at 2014-11-13 16:45:04 +0100
+Processing by ProduktesController#new as HTML
+  Rendered produktes/_form.html.erb (10.8ms)
+  Rendered produktes/new.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 46ms (Views: 44.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/produktes" for 127.0.0.1 at 2014-11-13 16:45:08 +0100
+Processing by ProduktesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rUZWc5fvg/2ixyk0ismvbNPwOAScHzsI4Cfi7uwvEXA=", "produkte"=>{"name"=>"", "beschreibung"=>"", "preis"=>"", "stueckzahl"=>"", "datumvon(1i)"=>"2014", "datumvon(2i)"=>"11", "datumvon(3i)"=>"13", "datumbis(1i)"=>"2014", "datumbis(2i)"=>"11", "datumbis(3i)"=>"13"}, "commit"=>"Create Produkte"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `besch' for #<Produkte:0x000000043e0810>):
+  app/controllers/produktes_controller.rb:30:in `block in create'
+  app/controllers/produktes_controller.rb:29:in `create'
+
+
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.5ms)
+
+
+Started GET "/produktes" for 127.0.0.1 at 2014-11-13 16:48:02 +0100
+Processing by ProduktesController#index as HTML
+  [1m[36mProdukte Load (0.4ms)[0m  [1mSELECT `produktes`.* FROM `produktes`[0m
+  Rendered produktes/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 63ms (Views: 55.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-13 16:48:02 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-13 16:48:02 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-13 16:48:02 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-13 16:48:02 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-13 16:48:02 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-13 16:48:02 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-13 16:48:02 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-13 16:48:02 +0100
+
+
+Started GET "/produktes/1/edit" for 127.0.0.1 at 2014-11-13 16:48:04 +0100
+Processing by ProduktesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProdukte Load (0.4ms)[0m  SELECT  `produktes`.* FROM `produktes`  WHERE `produktes`.`id` = 1 LIMIT 1
+  Rendered produktes/_form.html.erb (5.7ms)
+  Rendered produktes/edit.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 39ms (Views: 37.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/produktes" for 127.0.0.1 at 2014-11-13 16:48:06 +0100
+Processing by ProduktesController#index as HTML
+  [1m[36mProdukte Load (0.5ms)[0m  [1mSELECT `produktes`.* FROM `produktes`[0m
+  Rendered produktes/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 48ms (Views: 46.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/produktes/new" for 127.0.0.1 at 2014-11-13 16:48:08 +0100
+Processing by ProduktesController#new as HTML
+  Rendered produktes/_form.html.erb (8.5ms)
+  Rendered produktes/new.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 47ms (Views: 46.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/produktes" for 127.0.0.1 at 2014-11-13 16:48:09 +0100
+Processing by ProduktesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rUZWc5fvg/2ixyk0ismvbNPwOAScHzsI4Cfi7uwvEXA=", "produkte"=>{"name"=>"", "beschreibung"=>"", "preis"=>"", "stueckzahl"=>"", "datumvon(1i)"=>"2014", "datumvon(2i)"=>"11", "datumvon(3i)"=>"13", "datumbis(1i)"=>"2014", "datumbis(2i)"=>"11", "datumbis(3i)"=>"13"}, "commit"=>"Create Produkte"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `stueck' for #<Produkte:0x000000049bac40>):
+  app/controllers/produktes_controller.rb:30:in `block in create'
+  app/controllers/produktes_controller.rb:29:in `create'
+
+
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.2ms)
+
+
+Started GET "/produktes" for 127.0.0.1 at 2014-11-13 16:48:58 +0100
+Processing by ProduktesController#index as HTML
+  [1m[35mProdukte Load (0.5ms)[0m  SELECT `produktes`.* FROM `produktes`
+  Rendered produktes/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 55ms (Views: 46.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-13 16:48:58 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-13 16:48:58 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-13 16:48:58 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-13 16:48:58 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-13 16:48:58 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-13 16:48:58 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-13 16:48:58 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-13 16:48:58 +0100
+
+
+Started GET "/produktes/new" for 127.0.0.1 at 2014-11-13 16:49:00 +0100
+Processing by ProduktesController#new as HTML
+  Rendered produktes/_form.html.erb (9.2ms)
+  Rendered produktes/new.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 46ms (Views: 44.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/produktes" for 127.0.0.1 at 2014-11-13 16:49:01 +0100
+Processing by ProduktesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rUZWc5fvg/2ixyk0ismvbNPwOAScHzsI4Cfi7uwvEXA=", "produkte"=>{"name"=>"", "beschreibung"=>"", "preis"=>"", "stueckzahl"=>"", "datumvon(1i)"=>"2014", "datumvon(2i)"=>"11", "datumvon(3i)"=>"13", "datumbis(1i)"=>"2014", "datumbis(2i)"=>"11", "datumbis(3i)"=>"13"}, "commit"=>"Create Produkte"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered produktes/_form.html.erb (9.8ms)
+  Rendered produktes/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 55ms (Views: 50.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-13 16:49:01 +0100
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-13 16:49:01 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-13 16:49:01 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-13 16:49:01 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-13 16:49:01 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-13 16:49:01 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-13 16:49:01 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-13 16:49:01 +0100
+
+
+Started GET "/produktes" for 127.0.0.1 at 2014-11-13 16:50:22 +0100
+Processing by ProduktesController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+SyntaxError (/home/alex/github/BWL2/app/models/produkte.rb:29: syntax error, unexpected ':', expecting =>
+... => /\Aimage\/.*\Z/, :presence: true
+...                               ^):
+  app/models/produkte.rb:29: syntax error, unexpected ':', expecting =>
+  app/controllers/produktes_controller.rb:7:in `index'
+
+
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.5ms)
+
+
+Started GET "/produktes" for 127.0.0.1 at 2014-11-13 16:50:30 +0100
+Processing by ProduktesController#index as HTML
+  [1m[36mProdukte Load (0.4ms)[0m  [1mSELECT `produktes`.* FROM `produktes`[0m
+  Rendered produktes/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 52ms (Views: 44.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-13 16:50:31 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-13 16:50:31 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-13 16:50:31 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-13 16:50:31 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-13 16:50:31 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-13 16:50:31 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-13 16:50:31 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-13 16:50:31 +0100
+
+
+Started GET "/produktes/new" for 127.0.0.1 at 2014-11-13 16:50:32 +0100
+Processing by ProduktesController#new as HTML
+  Rendered produktes/_form.html.erb (6.5ms)
+  Rendered produktes/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 58ms (Views: 56.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/produktes" for 127.0.0.1 at 2014-11-13 16:50:33 +0100
+Processing by ProduktesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rUZWc5fvg/2ixyk0ismvbNPwOAScHzsI4Cfi7uwvEXA=", "produkte"=>{"name"=>"", "beschreibung"=>"", "preis"=>"", "stueckzahl"=>"", "datumvon(1i)"=>"2014", "datumvon(2i)"=>"11", "datumvon(3i)"=>"13", "datumbis(1i)"=>"2014", "datumbis(2i)"=>"11", "datumbis(3i)"=>"13"}, "commit"=>"Create Produkte"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered produktes/_form.html.erb (7.9ms)
+  Rendered produktes/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 49ms (Views: 42.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-13 16:50:33 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-13 16:50:33 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-13 16:50:33 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-13 16:50:33 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-13 16:50:33 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-13 16:50:33 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-13 16:50:33 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-13 16:50:33 +0100
+
+
+Started GET "/produktes" for 127.0.0.1 at 2014-11-13 16:51:56 +0100
+Processing by ProduktesController#index as HTML
+  [1m[35mProdukte Load (0.4ms)[0m  SELECT `produktes`.* FROM `produktes`
+  Rendered produktes/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 67ms (Views: 58.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-13 16:51:56 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-13 16:51:56 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-13 16:51:56 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-13 16:51:56 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-13 16:51:56 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-13 16:51:56 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-13 16:51:56 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-13 16:51:56 +0100
+
+
+Started GET "/produktes/new" for 127.0.0.1 at 2014-11-13 16:51:58 +0100
+Processing by ProduktesController#new as HTML
+  Rendered produktes/_form.html.erb (6.0ms)
+  Rendered produktes/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 42ms (Views: 40.6ms | ActiveRecord: 0.0ms)
