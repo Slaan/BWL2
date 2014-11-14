@@ -24,10 +24,16 @@
 \section{Erstes Praktikum}
 
 \subsection{Wahl unserer Ware}
-Wir haben uns darauf geeinigt Spaceships, sprich Raumschiffe zu vertreiben. Diese werden aus seperat Lieferbaren Produkten wie beispiels weise Laserkanonen oder Warpantriebseinheiten zusammengesetzt. Man kann sich zudem ganze Batalionen von Spaceships zum Sparpaket holen.
+Wir haben uns darauf geeinigt Spaceships, sprich Raumschiffe zu vertreiben. Diese werden aus seperat Lieferbaren Produkten wie beispiels weise Laserkanonen oder Warpantriebseinheiten zusammengesetzt. 
 
 \subsection{Architektur\"ubersicht}
 Wir brauchen als Komponenten eine Warenverwaltung, eine Kundenverwaltung, eine Rechnungsverwaltung und eine Businesslogic mit einer Web-GUI.
+
+\begin{figure}[h]
+  \caption{\"Ubersicht}
+  \label{fig:archi}
+  \includegraphics[scale=1.0]{architektur}
+\end{figure}
 
 \subsection{UML-Sequenzdiagramm}
 \begin{figure}[h]
@@ -51,7 +57,7 @@ In Abbildung \ref{fig:vergleich} zu sehen, ist ein Vergleich zwischen Java, Ruby
 
 \subsection{Design der Datenbank}
 \label{sec:dbdesign}
-Wir wurden gebeten eine Ware zu vertreiben, welche aus anderen Waren zusammengesetzt werden kann. Dieses Modell wird dadurch eine Rekursion enthalten, da wir die Bauteile der Produkte eventuell ebenfalls vertreiben w\"urden. Interessant ist also die Ware mit ihrem Namen, einer Beschreibung, einem Bild der Ware und ihrer Zusammensetzung. Hierf\"ur verwenden wir eine rekursive Relation von der Ware auf die Ware selbst. Diese Relation 
+Wir wurden gebeten eine Ware zu vertreiben, welche aus anderen Waren zusammengesetzt werden kann. Dieses Modell wird dadurch eine Rekursion enthalten, da wir die Bauteile der Produkte eventuell ebenfalls vertreiben w\"urden. Interessant ist also die Ware mit ihrem Namen, einer Beschreibung, einem Bild der Ware und ihrer Zusammensetzung. Hierf\"ur verwenden wir eine rekursive Relation von der Ware auf die Ware selbst.  
 
 \begin{wrapfigure}{R}{0.5\textwidth}
   	\begin{center}
@@ -69,13 +75,7 @@ Das Installieren der Softwarekomponenten hat sich unter Linux als \"au{\ss}erst 
 Um eine Erzeugung einer Datenbank wird sich in nur indirekt gek\"ummert, da Rails die Anbindung an Rails vollst\"andig \"ubernimmt. Ebenfalls arbeitet Rails intern mit Relationen, weshalb keine Fremdschl\"ussel in der Datenbank auftauchen. Desweiteren gestattet uns Rails durch \texttt{belongs\_to} und \texttt{has\_many} in den Modellen diese Relationen zu gestallten. Bilder werden in unserer Datenbank mittels Name, Typ, Gr\"o{\ss}e und dem letzten Update gespeichert. F\"ur die Verwaltung dieser haben wir uns f\"ur das gem Paperclip entschieden. 
 
 \subsubsection{Nutzeroberfl\"ache}
-Die Nutzeroberfl\"ache haben wir uns durch generieren lassen. Eine Validierung der Daten bei der Warenerzeugung findet in den Modellen statt. Wenn diese fehlschl\"agt, wird der Nutzer aufgefordert seine Eingabe zu korrigeren. Die Validierung \"uberpr\"uft lediglich ob die Daten f\"ur das Anlegen neuer Waren vorhanden sind.  
-
-\section{Zweites Praktikum}
-
-\section{Drittes Praktikum}
-
-\section{Viertes Praktikum}
+Die Nutzeroberfl\"ache haben wir uns durch Rails generieren lassen. Eine Validierung der Daten bei der Warenerzeugung findet in den Modellen statt. Wenn diese fehlschl\"agt, wird der Nutzer aufgefordert seine Eingabe zu korrigeren. Die Validierung \"uberpr\"uft lediglich ob die Daten f\"ur das Anlegen neuer Waren vorhanden sind.  
 
 \bibliographystyle{alpha}
 \bibliography{./references}
