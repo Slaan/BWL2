@@ -5017,3 +5017,1563 @@ Processing by ProduktesController#new as HTML
   Rendered produktes/_form.html.erb (6.0ms)
   Rendered produktes/new.html.erb within layouts/application (7.2ms)
 Completed 200 OK in 42ms (Views: 40.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-14 08:46:44 +0100
+
+Mysql2::Error (Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2 "No such file or directory")):
+  mysql2 (0.3.17) lib/mysql2/client.rb:70:in `connect'
+  mysql2 (0.3.17) lib/mysql2/client.rb:70:in `initialize'
+  activerecord (4.1.6) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.1.6) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+  /usr/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /usr/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  activerecord (4.1.6) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.1.6) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.1.6) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-14 08:47:04 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ProduktesController#index as HTML
+  [1m[35mProdukte Load (1.1ms)[0m  SELECT `produktes`.* FROM `produktes`
+  Rendered produktes/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 100ms (Views: 83.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-14 08:47:05 +0100
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-14 08:47:05 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-14 08:47:05 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-14 08:47:05 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-14 08:47:05 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-14 08:47:05 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-14 08:47:05 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-14 08:47:05 +0100
+
+
+Started DELETE "/produktes/1" for 127.0.0.1 at 2014-11-14 08:47:08 +0100
+Processing by ProduktesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rUZWc5fvg/2ixyk0ismvbNPwOAScHzsI4Cfi7uwvEXA=", "id"=>"1"}
+  [1m[36mProdukte Load (0.5ms)[0m  [1mSELECT  `produktes`.* FROM `produktes`  WHERE `produktes`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM `produktes` WHERE `produktes`.`id` = 1[0m
+  [1m[35m (12.8ms)[0m  COMMIT
+[paperclip] deleting /home/alex/github/BWL2/public/system/bilds/1/original/r92wee.jpg
+[paperclip] deleting /home/alex/github/BWL2/public/system/bilds/1/larger/r92wee.jpg
+[paperclip] deleting /home/alex/github/BWL2/public/system/bilds/1/medium/r92wee.jpg
+[paperclip] deleting /home/alex/github/BWL2/public/system/bilds/1/thumb/r92wee.jpg
+Redirected to http://localhost:3000/produktes
+Completed 302 Found in 24ms (ActiveRecord: 14.0ms)
+
+
+Started GET "/produktes" for 127.0.0.1 at 2014-11-14 08:47:08 +0100
+Processing by ProduktesController#index as HTML
+  [1m[36mProdukte Load (0.4ms)[0m  [1mSELECT `produktes`.* FROM `produktes`[0m
+  Rendered produktes/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 39ms (Views: 37.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-14 08:47:08 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-14 08:47:08 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-14 08:47:08 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-14 08:47:08 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-14 08:47:08 +0100
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-14 08:47:08 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-14 08:47:08 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-14 08:47:08 +0100
+
+
+Started GET "/produktes/new" for 127.0.0.1 at 2014-11-14 08:48:40 +0100
+Processing by ProduktesController#new as HTML
+  Rendered produktes/_form.html.erb (18.4ms)
+  Rendered produktes/new.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 57ms (Views: 55.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/produktes" for 127.0.0.1 at 2014-11-14 08:49:07 +0100
+Processing by ProduktesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rUZWc5fvg/2ixyk0ismvbNPwOAScHzsI4Cfi7uwvEXA=", "produkte"=>{"name"=>"Millenium Falke", "beschreibung"=>"", "preis"=>"100000", "stueckzahl"=>"1", "datumvon(1i)"=>"2014", "datumvon(2i)"=>"11", "datumvon(3i)"=>"14", "datumbis(1i)"=>"2014", "datumbis(2i)"=>"11", "datumbis(3i)"=>"14", "bild"=>#<ActionDispatch::Http::UploadedFile:0x000000054697b8 @tempfile=#<Tempfile:/tmp/RackMultipart20141114-30715-8gfhf9>, @original_filename="mill-falc.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"produkte[bild]\"; filename=\"mill-falc.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Produkte"}
+Command :: file -b --mime '/tmp/6f28633fbd4e3fb8b327d43f36ee851420141114-30715-1668i3e.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/6f28633fbd4e3fb8b327d43f36ee851420141114-30715-1n9teyj.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/6f28633fbd4e3fb8b327d43f36ee851420141114-30715-1n9teyj.jpg[0]'
+Command :: convert '/tmp/6f28633fbd4e3fb8b327d43f36ee851420141114-30715-1n9teyj.jpg[0]' -auto-orient -resize "400x400>" '/tmp/6f28633fbd4e3fb8b327d43f36ee851420141114-30715-1n9teyj20141114-30715-1o91xov'
+Command :: file -b --mime '/tmp/6f28633fbd4e3fb8b327d43f36ee851420141114-30715-1n9teyj20141114-30715-1o91xov'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/6f28633fbd4e3fb8b327d43f36ee851420141114-30715-1n9teyj.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/6f28633fbd4e3fb8b327d43f36ee851420141114-30715-1n9teyj.jpg[0]'
+Command :: convert '/tmp/6f28633fbd4e3fb8b327d43f36ee851420141114-30715-1n9teyj.jpg[0]' -auto-orient -resize "200x200>" '/tmp/6f28633fbd4e3fb8b327d43f36ee851420141114-30715-1n9teyj20141114-30715-1yt1f8a'
+Command :: file -b --mime '/tmp/6f28633fbd4e3fb8b327d43f36ee851420141114-30715-1n9teyj20141114-30715-1yt1f8a'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/6f28633fbd4e3fb8b327d43f36ee851420141114-30715-1n9teyj.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/6f28633fbd4e3fb8b327d43f36ee851420141114-30715-1n9teyj.jpg[0]'
+Command :: convert '/tmp/6f28633fbd4e3fb8b327d43f36ee851420141114-30715-1n9teyj.jpg[0]' -auto-orient -resize "100x100>" '/tmp/6f28633fbd4e3fb8b327d43f36ee851420141114-30715-1n9teyj20141114-30715-19rg599'
+Command :: file -b --mime '/tmp/6f28633fbd4e3fb8b327d43f36ee851420141114-30715-1n9teyj20141114-30715-19rg599'
+  [1m[35m (0.2ms)[0m  BEGIN
+Command :: file -b --mime '/tmp/6f28633fbd4e3fb8b327d43f36ee851420141114-30715-1uajpgn.jpg'
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered produktes/_form.html.erb (10.8ms)
+  Rendered produktes/new.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 470ms (Views: 46.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-14 08:49:07 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-14 08:49:07 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-14 08:49:07 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-14 08:49:07 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-14 08:49:07 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-14 08:49:07 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-14 08:49:07 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-14 08:49:07 +0100
+
+
+Started POST "/produktes" for 127.0.0.1 at 2014-11-14 08:49:26 +0100
+Processing by ProduktesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rUZWc5fvg/2ixyk0ismvbNPwOAScHzsI4Cfi7uwvEXA=", "produkte"=>{"name"=>"Millenium Falke", "beschreibung"=>"Das schnellste Raumschiff des Universums.", "preis"=>"100000", "stueckzahl"=>"1", "datumvon(1i)"=>"2014", "datumvon(2i)"=>"11", "datumvon(3i)"=>"14", "datumbis(1i)"=>"2014", "datumbis(2i)"=>"11", "datumbis(3i)"=>"14"}, "commit"=>"Create Produkte"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `produktes` (`beschreibung`, `created_at`, `datumbis`, `datumvon`, `name`, `preis`, `stueckzahl`, `updated_at`) VALUES ('Das schnellste Raumschiff des Universums.', '2014-11-14 07:49:26', '2014-11-14', '2014-11-14', 'Millenium Falke', 100000, 1, '2014-11-14 07:49:26')[0m
+  [1m[35m (5.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/produktes/2
+Completed 302 Found in 12ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/produktes/2" for 127.0.0.1 at 2014-11-14 08:49:26 +0100
+Processing by ProduktesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProdukte Load (0.4ms)[0m  [1mSELECT  `produktes`.* FROM `produktes`  WHERE `produktes`.`id` = 2 LIMIT 1[0m
+  Rendered produktes/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 68ms (Views: 66.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-14 08:49:26 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-14 08:49:26 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-14 08:49:26 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-14 08:49:26 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-14 08:49:26 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-14 08:49:26 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-14 08:49:26 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-14 08:49:26 +0100
+
+
+Started GET "/bilds/medium/missing.png" for 127.0.0.1 at 2014-11-14 08:49:26 +0100
+
+ActionController::RoutingError (No route matches [GET] "/bilds/medium/missing.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.6ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (19.7ms)
+
+
+Started GET "/produktes" for 127.0.0.1 at 2014-11-14 08:49:28 +0100
+Processing by ProduktesController#index as HTML
+  [1m[35mProdukte Load (0.4ms)[0m  SELECT `produktes`.* FROM `produktes`
+  Rendered produktes/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/bilds/thumb/missing.png" for 127.0.0.1 at 2014-11-14 08:49:28 +0100
+
+ActionController::RoutingError (No route matches [GET] "/bilds/thumb/missing.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.1ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (23.0ms)
+
+
+Started GET "/produktes/new" for 127.0.0.1 at 2014-11-14 08:49:36 +0100
+Processing by ProduktesController#new as HTML
+  Rendered produktes/_form.html.erb (13.3ms)
+  Rendered produktes/new.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 63ms (Views: 61.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/produktes" for 127.0.0.1 at 2014-11-14 08:49:49 +0100
+Processing by ProduktesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rUZWc5fvg/2ixyk0ismvbNPwOAScHzsI4Cfi7uwvEXA=", "produkte"=>{"name"=>"asdf", "beschreibung"=>"asdf", "preis"=>"111", "stueckzahl"=>"1", "datumvon(1i)"=>"2014", "datumvon(2i)"=>"11", "datumvon(3i)"=>"14", "datumbis(1i)"=>"2014", "datumbis(2i)"=>"11", "datumbis(3i)"=>"14", "bild"=>#<ActionDispatch::Http::UploadedFile:0x00000005a9a178 @tempfile=#<Tempfile:/tmp/RackMultipart20141114-30715-13nxvd>, @original_filename="kanone.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"produkte[bild]\"; filename=\"kanone.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Produkte"}
+Command :: file -b --mime '/tmp/5750b25a413588fb63d2af844276beba20141114-30715-hb0f9o.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/5750b25a413588fb63d2af844276beba20141114-30715-40ubsz.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/5750b25a413588fb63d2af844276beba20141114-30715-40ubsz.jpg[0]'
+Command :: convert '/tmp/5750b25a413588fb63d2af844276beba20141114-30715-40ubsz.jpg[0]' -auto-orient -resize "400x400>" '/tmp/5750b25a413588fb63d2af844276beba20141114-30715-40ubsz20141114-30715-1bj466h'
+Command :: file -b --mime '/tmp/5750b25a413588fb63d2af844276beba20141114-30715-40ubsz20141114-30715-1bj466h'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/5750b25a413588fb63d2af844276beba20141114-30715-40ubsz.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/5750b25a413588fb63d2af844276beba20141114-30715-40ubsz.jpg[0]'
+Command :: convert '/tmp/5750b25a413588fb63d2af844276beba20141114-30715-40ubsz.jpg[0]' -auto-orient -resize "200x200>" '/tmp/5750b25a413588fb63d2af844276beba20141114-30715-40ubsz20141114-30715-1rl4co9'
+Command :: file -b --mime '/tmp/5750b25a413588fb63d2af844276beba20141114-30715-40ubsz20141114-30715-1rl4co9'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/5750b25a413588fb63d2af844276beba20141114-30715-40ubsz.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/5750b25a413588fb63d2af844276beba20141114-30715-40ubsz.jpg[0]'
+Command :: convert '/tmp/5750b25a413588fb63d2af844276beba20141114-30715-40ubsz.jpg[0]' -auto-orient -resize "100x100>" '/tmp/5750b25a413588fb63d2af844276beba20141114-30715-40ubsz20141114-30715-1sl549w'
+Command :: file -b --mime '/tmp/5750b25a413588fb63d2af844276beba20141114-30715-40ubsz20141114-30715-1sl549w'
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/tmp/5750b25a413588fb63d2af844276beba20141114-30715-11naktb.jpg'
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `produktes` (`beschreibung`, `bild_content_type`, `bild_file_name`, `bild_file_size`, `bild_updated_at`, `created_at`, `datumbis`, `datumvon`, `name`, `preis`, `stueckzahl`, `updated_at`) VALUES ('asdf', 'image/jpeg', 'kanone.jpg', 10107, '2014-11-14 07:49:49', '2014-11-14 07:49:49', '2014-11-14', '2014-11-14', 'asdf', 111, 1, '2014-11-14 07:49:49')
+  [1m[36m (8.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/produktes/3
+Completed 302 Found in 290ms (ActiveRecord: 8.7ms)
+
+
+Started GET "/produktes/3" for 127.0.0.1 at 2014-11-14 08:49:49 +0100
+Processing by ProduktesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mProdukte Load (0.5ms)[0m  SELECT  `produktes`.* FROM `produktes`  WHERE `produktes`.`id` = 3 LIMIT 1
+  Rendered produktes/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 41ms (Views: 38.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-14 08:49:49 +0100
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-14 08:49:49 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-14 08:49:49 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-14 08:49:49 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-14 08:49:49 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-14 08:49:49 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-14 08:49:49 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-14 08:49:49 +0100
+
+
+Started GET "/produktes" for 127.0.0.1 at 2014-11-14 08:49:51 +0100
+Processing by ProduktesController#index as HTML
+  [1m[36mProdukte Load (0.5ms)[0m  [1mSELECT `produktes`.* FROM `produktes`[0m
+  Rendered produktes/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 48ms (Views: 46.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bilds/thumb/missing.png" for 127.0.0.1 at 2014-11-14 08:49:51 +0100
+
+ActionController::RoutingError (No route matches [GET] "/bilds/thumb/missing.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (20.2ms)
+
+
+Started DELETE "/produktes/2" for 127.0.0.1 at 2014-11-14 08:49:53 +0100
+Processing by ProduktesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rUZWc5fvg/2ixyk0ismvbNPwOAScHzsI4Cfi7uwvEXA=", "id"=>"2"}
+  [1m[35mProdukte Load (0.4ms)[0m  SELECT  `produktes`.* FROM `produktes`  WHERE `produktes`.`id` = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM `produktes` WHERE `produktes`.`id` = 2
+  [1m[36m (10.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/produktes
+Completed 302 Found in 14ms (ActiveRecord: 10.7ms)
+
+
+Started GET "/produktes" for 127.0.0.1 at 2014-11-14 08:49:53 +0100
+Processing by ProduktesController#index as HTML
+  [1m[35mProdukte Load (0.3ms)[0m  SELECT `produktes`.* FROM `produktes`
+  Rendered produktes/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 37ms (Views: 35.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-14 08:49:54 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-14 08:49:54 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-14 08:49:54 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-14 08:49:54 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-14 08:49:54 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-14 08:49:54 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-14 08:49:54 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-14 08:49:54 +0100
+
+
+Started DELETE "/produktes/3" for 127.0.0.1 at 2014-11-14 08:49:58 +0100
+Processing by ProduktesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rUZWc5fvg/2ixyk0ismvbNPwOAScHzsI4Cfi7uwvEXA=", "id"=>"3"}
+  [1m[36mProdukte Load (0.4ms)[0m  [1mSELECT  `produktes`.* FROM `produktes`  WHERE `produktes`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM `produktes` WHERE `produktes`.`id` = 3[0m
+  [1m[35m (5.6ms)[0m  COMMIT
+[paperclip] deleting /home/alex/github/BWL2/public/system/bilds/3/original/kanone.jpg
+[paperclip] deleting /home/alex/github/BWL2/public/system/bilds/3/larger/kanone.jpg
+[paperclip] deleting /home/alex/github/BWL2/public/system/bilds/3/medium/kanone.jpg
+[paperclip] deleting /home/alex/github/BWL2/public/system/bilds/3/thumb/kanone.jpg
+Redirected to http://localhost:3000/produktes
+Completed 302 Found in 15ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/produktes" for 127.0.0.1 at 2014-11-14 08:49:58 +0100
+Processing by ProduktesController#index as HTML
+  [1m[36mProdukte Load (0.6ms)[0m  [1mSELECT `produktes`.* FROM `produktes`[0m
+  Rendered produktes/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 41ms (Views: 39.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-14 08:49:58 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-14 08:49:58 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-14 08:49:58 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-14 08:49:58 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-14 08:49:58 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-14 08:49:58 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-14 08:49:58 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-14 08:49:58 +0100
+
+
+Started GET "/produktes/new" for 127.0.0.1 at 2014-11-14 08:50:10 +0100
+Processing by ProduktesController#new as HTML
+  Rendered produktes/_form.html.erb (5.7ms)
+  Rendered produktes/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 52ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-14 08:50:47 +0100
+Processing by ProduktesController#index as HTML
+  [1m[35mProdukte Load (0.4ms)[0m  SELECT `produktes`.* FROM `produktes`
+  Rendered produktes/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-14 08:50:47 +0100
+Processing by ProduktesController#index as HTML
+  [1m[36mProdukte Load (0.3ms)[0m  [1mSELECT `produktes`.* FROM `produktes`[0m
+  Rendered produktes/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 37ms (Views: 35.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-14 08:50:47 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-14 08:50:47 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-14 08:50:47 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-14 08:50:47 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-14 08:50:47 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-14 08:50:47 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-14 08:50:47 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-14 08:50:47 +0100
+
+
+Started GET "/produktes/new" for 127.0.0.1 at 2014-11-14 08:51:01 +0100
+Processing by ProduktesController#new as HTML
+  Rendered produktes/_form.html.erb (6.8ms)
+  Rendered produktes/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 44ms (Views: 42.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/produktes" for 127.0.0.1 at 2014-11-14 08:51:55 +0100
+Processing by ProduktesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rUZWc5fvg/2ixyk0ismvbNPwOAScHzsI4Cfi7uwvEXA=", "produkte"=>{"name"=>"Laser Kannone", "beschreibung"=>"Boom.", "preis"=>"10000", "stueckzahl"=>"1", "datumvon(1i)"=>"2014", "datumvon(2i)"=>"11", "datumvon(3i)"=>"14", "datumbis(1i)"=>"2014", "datumbis(2i)"=>"11", "datumbis(3i)"=>"14", "bild"=>#<ActionDispatch::Http::UploadedFile:0x000000054a4728 @tempfile=#<Tempfile:/tmp/RackMultipart20141114-30715-r2i058>, @original_filename="kanone.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"produkte[bild]\"; filename=\"kanone.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Produkte"}
+Command :: file -b --mime '/tmp/5750b25a413588fb63d2af844276beba20141114-30715-1p6izdb.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/5750b25a413588fb63d2af844276beba20141114-30715-ataotd.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/5750b25a413588fb63d2af844276beba20141114-30715-ataotd.jpg[0]'
+Command :: convert '/tmp/5750b25a413588fb63d2af844276beba20141114-30715-ataotd.jpg[0]' -auto-orient -resize "400x400>" '/tmp/5750b25a413588fb63d2af844276beba20141114-30715-ataotd20141114-30715-dwotu'
+Command :: file -b --mime '/tmp/5750b25a413588fb63d2af844276beba20141114-30715-ataotd20141114-30715-dwotu'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/5750b25a413588fb63d2af844276beba20141114-30715-ataotd.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/5750b25a413588fb63d2af844276beba20141114-30715-ataotd.jpg[0]'
+Command :: convert '/tmp/5750b25a413588fb63d2af844276beba20141114-30715-ataotd.jpg[0]' -auto-orient -resize "200x200>" '/tmp/5750b25a413588fb63d2af844276beba20141114-30715-ataotd20141114-30715-4vh1ee'
+Command :: file -b --mime '/tmp/5750b25a413588fb63d2af844276beba20141114-30715-ataotd20141114-30715-4vh1ee'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/5750b25a413588fb63d2af844276beba20141114-30715-ataotd.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/5750b25a413588fb63d2af844276beba20141114-30715-ataotd.jpg[0]'
+Command :: convert '/tmp/5750b25a413588fb63d2af844276beba20141114-30715-ataotd.jpg[0]' -auto-orient -resize "100x100>" '/tmp/5750b25a413588fb63d2af844276beba20141114-30715-ataotd20141114-30715-ucl3o5'
+Command :: file -b --mime '/tmp/5750b25a413588fb63d2af844276beba20141114-30715-ataotd20141114-30715-ucl3o5'
+  [1m[35m (0.3ms)[0m  BEGIN
+Command :: file -b --mime '/tmp/5750b25a413588fb63d2af844276beba20141114-30715-1twdmya.jpg'
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `produktes` (`beschreibung`, `bild_content_type`, `bild_file_name`, `bild_file_size`, `bild_updated_at`, `created_at`, `datumbis`, `datumvon`, `name`, `preis`, `stueckzahl`, `updated_at`) VALUES ('Boom.', 'image/jpeg', 'kanone.jpg', 10107, '2014-11-14 07:51:55', '2014-11-14 07:51:55', '2014-11-14', '2014-11-14', 'Laser Kannone', 10000, 1, '2014-11-14 07:51:55')[0m
+  [1m[35m (6.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/produktes/4
+Completed 302 Found in 286ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/produktes/4" for 127.0.0.1 at 2014-11-14 08:51:55 +0100
+Processing by ProduktesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProdukte Load (0.5ms)[0m  [1mSELECT  `produktes`.* FROM `produktes`  WHERE `produktes`.`id` = 4 LIMIT 1[0m
+  Rendered produktes/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 38ms (Views: 35.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-14 08:51:55 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-14 08:51:55 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-14 08:51:55 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-14 08:51:55 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-14 08:51:55 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-14 08:51:55 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-14 08:51:55 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-14 08:51:55 +0100
+
+
+Started GET "/produktes" for 127.0.0.1 at 2014-11-14 08:52:01 +0100
+Processing by ProduktesController#index as HTML
+  [1m[35mProdukte Load (0.6ms)[0m  SELECT `produktes`.* FROM `produktes`
+  Rendered produktes/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 42ms (Views: 40.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/produktes/new" for 127.0.0.1 at 2014-11-14 08:52:07 +0100
+Processing by ProduktesController#new as HTML
+  Rendered produktes/_form.html.erb (6.9ms)
+  Rendered produktes/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/produktes" for 127.0.0.1 at 2014-11-14 08:52:21 +0100
+Processing by ProduktesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rUZWc5fvg/2ixyk0ismvbNPwOAScHzsI4Cfi7uwvEXA=", "produkte"=>{"name"=>"Antrieb", "beschreibung"=>"schnell schnell", "preis"=>"10000", "stueckzahl"=>"2", "datumvon(1i)"=>"2014", "datumvon(2i)"=>"11", "datumvon(3i)"=>"14", "datumbis(1i)"=>"2014", "datumbis(2i)"=>"11", "datumbis(3i)"=>"14", "bild"=>#<ActionDispatch::Http::UploadedFile:0x00000004f48400 @tempfile=#<Tempfile:/tmp/RackMultipart20141114-30715-b0wlft>, @original_filename="antrieb.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"produkte[bild]\"; filename=\"antrieb.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Produkte"}
+Command :: file -b --mime '/tmp/b4b786dfe3158032649be64684e99bca20141114-30715-1jdy3l6.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/b4b786dfe3158032649be64684e99bca20141114-30715-2h4xmd.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/b4b786dfe3158032649be64684e99bca20141114-30715-2h4xmd.jpg[0]'
+Command :: convert '/tmp/b4b786dfe3158032649be64684e99bca20141114-30715-2h4xmd.jpg[0]' -auto-orient -resize "400x400>" '/tmp/b4b786dfe3158032649be64684e99bca20141114-30715-2h4xmd20141114-30715-1jcnexc'
+Command :: file -b --mime '/tmp/b4b786dfe3158032649be64684e99bca20141114-30715-2h4xmd20141114-30715-1jcnexc'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/b4b786dfe3158032649be64684e99bca20141114-30715-2h4xmd.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/b4b786dfe3158032649be64684e99bca20141114-30715-2h4xmd.jpg[0]'
+Command :: convert '/tmp/b4b786dfe3158032649be64684e99bca20141114-30715-2h4xmd.jpg[0]' -auto-orient -resize "200x200>" '/tmp/b4b786dfe3158032649be64684e99bca20141114-30715-2h4xmd20141114-30715-1uh0l7a'
+Command :: file -b --mime '/tmp/b4b786dfe3158032649be64684e99bca20141114-30715-2h4xmd20141114-30715-1uh0l7a'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/b4b786dfe3158032649be64684e99bca20141114-30715-2h4xmd.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/b4b786dfe3158032649be64684e99bca20141114-30715-2h4xmd.jpg[0]'
+Command :: convert '/tmp/b4b786dfe3158032649be64684e99bca20141114-30715-2h4xmd.jpg[0]' -auto-orient -resize "100x100>" '/tmp/b4b786dfe3158032649be64684e99bca20141114-30715-2h4xmd20141114-30715-1cr60uf'
+Command :: file -b --mime '/tmp/b4b786dfe3158032649be64684e99bca20141114-30715-2h4xmd20141114-30715-1cr60uf'
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/tmp/b4b786dfe3158032649be64684e99bca20141114-30715-3klb19.jpg'
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `produktes` (`beschreibung`, `bild_content_type`, `bild_file_name`, `bild_file_size`, `bild_updated_at`, `created_at`, `datumbis`, `datumvon`, `name`, `preis`, `stueckzahl`, `updated_at`) VALUES ('schnell schnell', 'image/jpeg', 'antrieb.jpg', 9948, '2014-11-14 07:52:21', '2014-11-14 07:52:21', '2014-11-14', '2014-11-14', 'Antrieb', 10000, 2, '2014-11-14 07:52:21')
+  [1m[36m (9.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/produktes/5
+Completed 302 Found in 284ms (ActiveRecord: 10.0ms)
+
+
+Started GET "/produktes/5" for 127.0.0.1 at 2014-11-14 08:52:21 +0100
+Processing by ProduktesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mProdukte Load (0.4ms)[0m  SELECT  `produktes`.* FROM `produktes`  WHERE `produktes`.`id` = 5 LIMIT 1
+  Rendered produktes/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 47ms (Views: 44.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-14 08:52:21 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-14 08:52:21 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-14 08:52:21 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-14 08:52:21 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-14 08:52:21 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-14 08:52:21 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-14 08:52:21 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-14 08:52:21 +0100
+
+
+Started GET "/produktes" for 127.0.0.1 at 2014-11-14 08:52:22 +0100
+Processing by ProduktesController#index as HTML
+  [1m[36mProdukte Load (0.4ms)[0m  [1mSELECT `produktes`.* FROM `produktes`[0m
+  Rendered produktes/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 43ms (Views: 41.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/produktes?utf8=%E2%9C%93&search=Laser" for 127.0.0.1 at 2014-11-14 08:52:29 +0100
+Processing by ProduktesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Laser"}
+  [1m[35mProdukte Load (0.4ms)[0m  SELECT `produktes`.* FROM `produktes`  WHERE (name LIKE '%Laser%')
+  Rendered produktes/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 43ms (Views: 41.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-14 08:52:29 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-14 08:52:29 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-14 08:52:29 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-14 08:52:29 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-14 08:52:29 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-14 08:52:29 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-14 08:52:29 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-14 08:52:29 +0100
+
+
+Started GET "/produktes?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2014-11-14 08:52:35 +0100
+Processing by ProduktesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  [1m[36mProdukte Load (0.5ms)[0m  [1mSELECT `produktes`.* FROM `produktes`  WHERE (name LIKE '%%')[0m
+  Rendered produktes/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 42ms (Views: 40.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-14 08:52:35 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-14 08:52:35 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-14 08:52:35 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-14 08:52:35 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-14 08:52:35 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-14 08:52:35 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-14 08:52:35 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-14 08:52:35 +0100
+
+
+Started DELETE "/produktes/4" for 127.0.0.1 at 2014-11-14 08:54:20 +0100
+Processing by ProduktesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rUZWc5fvg/2ixyk0ismvbNPwOAScHzsI4Cfi7uwvEXA=", "id"=>"4"}
+  [1m[35mProdukte Load (0.4ms)[0m  SELECT  `produktes`.* FROM `produktes`  WHERE `produktes`.`id` = 4 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM `produktes` WHERE `produktes`.`id` = 4
+  [1m[36m (15.6ms)[0m  [1mCOMMIT[0m
+[paperclip] deleting /home/alex/github/BWL2/public/system/bilds/4/original/kanone.jpg
+[paperclip] deleting /home/alex/github/BWL2/public/system/bilds/4/larger/kanone.jpg
+[paperclip] deleting /home/alex/github/BWL2/public/system/bilds/4/medium/kanone.jpg
+[paperclip] deleting /home/alex/github/BWL2/public/system/bilds/4/thumb/kanone.jpg
+Redirected to http://localhost:3000/produktes
+Completed 302 Found in 24ms (ActiveRecord: 16.4ms)
+
+
+Started GET "/produktes" for 127.0.0.1 at 2014-11-14 08:54:20 +0100
+Processing by ProduktesController#index as HTML
+  [1m[35mProdukte Load (0.4ms)[0m  SELECT `produktes`.* FROM `produktes`
+  Rendered produktes/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 41ms (Views: 40.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-14 08:54:20 +0100
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-14 08:54:20 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-14 08:54:20 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-14 08:54:20 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-14 08:54:20 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-14 08:54:20 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-14 08:54:20 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-14 08:54:20 +0100
+
+
+Started DELETE "/produktes/5" for 127.0.0.1 at 2014-11-14 08:54:22 +0100
+Processing by ProduktesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rUZWc5fvg/2ixyk0ismvbNPwOAScHzsI4Cfi7uwvEXA=", "id"=>"5"}
+  [1m[36mProdukte Load (0.6ms)[0m  [1mSELECT  `produktes`.* FROM `produktes`  WHERE `produktes`.`id` = 5 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM `produktes` WHERE `produktes`.`id` = 5[0m
+  [1m[35m (6.2ms)[0m  COMMIT
+[paperclip] deleting /home/alex/github/BWL2/public/system/bilds/5/original/antrieb.jpg
+[paperclip] deleting /home/alex/github/BWL2/public/system/bilds/5/larger/antrieb.jpg
+[paperclip] deleting /home/alex/github/BWL2/public/system/bilds/5/medium/antrieb.jpg
+[paperclip] deleting /home/alex/github/BWL2/public/system/bilds/5/thumb/antrieb.jpg
+Redirected to http://localhost:3000/produktes
+Completed 302 Found in 16ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/produktes" for 127.0.0.1 at 2014-11-14 08:54:22 +0100
+Processing by ProduktesController#index as HTML
+  [1m[36mProdukte Load (0.4ms)[0m  [1mSELECT `produktes`.* FROM `produktes`[0m
+  Rendered produktes/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 45ms (Views: 43.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-14 08:54:22 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-14 08:54:22 +0100
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-14 08:54:22 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-14 08:54:22 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-14 08:54:22 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-14 08:54:22 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-14 08:54:22 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-14 08:54:22 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-14 16:14:17 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ProduktesController#index as HTML
+  [1m[35mProdukte Load (0.5ms)[0m  SELECT `produktes`.* FROM `produktes`
+  Rendered produktes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 84ms (Views: 69.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-14 16:14:18 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-14 16:14:18 +0100
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-14 16:14:18 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-14 16:14:18 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-14 16:14:18 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-14 16:14:18 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-14 16:14:18 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-14 16:14:18 +0100
+
+
+Started GET "/produktes/new" for 127.0.0.1 at 2014-11-14 16:14:21 +0100
+Processing by ProduktesController#new as HTML
+  Rendered produktes/_form.html.erb (38.7ms)
+  Rendered produktes/new.html.erb within layouts/application (42.6ms)
+Completed 200 OK in 87ms (Views: 83.4ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/produktes" for 127.0.0.1 at 2014-11-14 16:14:45 +0100
+Processing by ProduktesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rUZWc5fvg/2ixyk0ismvbNPwOAScHzsI4Cfi7uwvEXA=", "produkte"=>{"name"=>"asdf", "beschreibung"=>"asdf", "preis"=>"2", "stueckzahl"=>"1", "datumvon(1i)"=>"2014", "datumvon(2i)"=>"11", "datumvon(3i)"=>"14", "datumbis(1i)"=>"2014", "datumbis(2i)"=>"11", "datumbis(3i)"=>"14", "bild"=>#<ActionDispatch::Http::UploadedFile:0x00000002913618 @tempfile=#<Tempfile:/tmp/RackMultipart20141114-2618-1gjkfwl>, @original_filename="antrieb.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"produkte[bild]\"; filename=\"antrieb.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Produkte"}
+Command :: file -b --mime '/tmp/b4b786dfe3158032649be64684e99bca20141114-2618-1xh9jhn.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/b4b786dfe3158032649be64684e99bca20141114-2618-196ggmc.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/b4b786dfe3158032649be64684e99bca20141114-2618-196ggmc.jpg[0]'
+Command :: convert '/tmp/b4b786dfe3158032649be64684e99bca20141114-2618-196ggmc.jpg[0]' -auto-orient -resize "400x400>" '/tmp/b4b786dfe3158032649be64684e99bca20141114-2618-196ggmc20141114-2618-1wcpkul'
+Command :: file -b --mime '/tmp/b4b786dfe3158032649be64684e99bca20141114-2618-196ggmc20141114-2618-1wcpkul'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/b4b786dfe3158032649be64684e99bca20141114-2618-196ggmc.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/b4b786dfe3158032649be64684e99bca20141114-2618-196ggmc.jpg[0]'
+Command :: convert '/tmp/b4b786dfe3158032649be64684e99bca20141114-2618-196ggmc.jpg[0]' -auto-orient -resize "200x200>" '/tmp/b4b786dfe3158032649be64684e99bca20141114-2618-196ggmc20141114-2618-1d3qgoj'
+Command :: file -b --mime '/tmp/b4b786dfe3158032649be64684e99bca20141114-2618-196ggmc20141114-2618-1d3qgoj'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/b4b786dfe3158032649be64684e99bca20141114-2618-196ggmc.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/b4b786dfe3158032649be64684e99bca20141114-2618-196ggmc.jpg[0]'
+Command :: convert '/tmp/b4b786dfe3158032649be64684e99bca20141114-2618-196ggmc.jpg[0]' -auto-orient -resize "100x100>" '/tmp/b4b786dfe3158032649be64684e99bca20141114-2618-196ggmc20141114-2618-1wdthvu'
+Command :: file -b --mime '/tmp/b4b786dfe3158032649be64684e99bca20141114-2618-196ggmc20141114-2618-1wdthvu'
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/tmp/b4b786dfe3158032649be64684e99bca20141114-2618-12zhn9m.jpg'
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `produktes` (`beschreibung`, `bild_content_type`, `bild_file_name`, `bild_file_size`, `bild_updated_at`, `created_at`, `datumbis`, `datumvon`, `name`, `preis`, `stueckzahl`, `updated_at`) VALUES ('asdf', 'image/jpeg', 'antrieb.jpg', 9948, '2014-11-14 15:14:45', '2014-11-14 15:14:46', '2014-11-14', '2014-11-14', 'asdf', 2, 1, '2014-11-14 15:14:46')
+  [1m[36m (9.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/produktes/6
+Completed 302 Found in 321ms (ActiveRecord: 9.9ms)
+
+
+Started GET "/produktes/6" for 127.0.0.1 at 2014-11-14 16:14:46 +0100
+Processing by ProduktesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mProdukte Load (0.6ms)[0m  SELECT  `produktes`.* FROM `produktes`  WHERE `produktes`.`id` = 6 LIMIT 1
+  Rendered produktes/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 44ms (Views: 39.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-14 16:14:46 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-14 16:14:46 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-14 16:14:46 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-14 16:14:46 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-14 16:14:46 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-14 16:14:46 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-14 16:14:46 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-14 16:14:46 +0100
+
+
+Started GET "/produktes" for 127.0.0.1 at 2014-11-14 16:14:47 +0100
+Processing by ProduktesController#index as HTML
+  [1m[36mProdukte Load (0.5ms)[0m  [1mSELECT `produktes`.* FROM `produktes`[0m
+  Rendered produktes/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 41ms (Views: 39.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/produktes" for 127.0.0.1 at 2014-11-14 16:15:04 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ProduktesController#index as HTML
+  [1m[35mProdukte Load (0.5ms)[0m  SELECT `produktes`.* FROM `produktes`
+  Rendered produktes/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 98ms (Views: 83.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-14 16:15:05 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-14 16:15:05 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-14 16:15:05 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-14 16:15:05 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-14 16:15:05 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-14 16:15:05 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-14 16:15:05 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-14 16:15:05 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-27 18:06:10 +0100
+
+Mysql2::Error (Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2 "No such file or directory")):
+  mysql2 (0.3.17) lib/mysql2/client.rb:70:in `connect'
+  mysql2 (0.3.17) lib/mysql2/client.rb:70:in `initialize'
+  activerecord (4.1.6) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.1.6) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+  /usr/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /usr/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  activerecord (4.1.6) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.1.6) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.1.6) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-27 18:06:37 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (2.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ProduktesController#index as HTML
+  [1m[35mProdukte Load (0.9ms)[0m  SELECT `produktes`.* FROM `produktes`
+  Rendered produktes/index.html.erb within layouts/application (30.9ms)
+  Rendered produktes/_footer.html.erb (0.4ms)
+Completed 200 OK in 126ms (Views: 105.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-27 18:06:38 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-27 18:06:38 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 18:06:38 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-27 18:06:38 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-27 18:06:38 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 18:06:38 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 18:06:38 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 18:06:38 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-27 18:07:39 +0100
+Processing by ProduktesController#index as HTML
+  [1m[36mProdukte Load (0.4ms)[0m  [1mSELECT `produktes`.* FROM `produktes`[0m
+  Rendered produktes/index.html.erb within layouts/application (3.6ms)
+  Rendered produktes/_footer.html.erb (0.1ms)
+Completed 200 OK in 41ms (Views: 39.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-27 18:07:39 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-27 18:07:39 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 18:07:39 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 18:07:39 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 18:07:39 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-27 18:07:39 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-27 18:07:39 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 18:07:39 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-27 18:08:17 +0100
+Processing by ProduktesController#index as HTML
+  [1m[35mProdukte Load (0.5ms)[0m  SELECT `produktes`.* FROM `produktes`
+  Rendered produktes/index.html.erb within layouts/application (5.0ms)
+  Rendered produktes/_footer.html.erb (0.0ms)
+Completed 200 OK in 42ms (Views: 40.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-27 18:08:17 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-27 18:08:17 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 18:08:17 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 18:08:17 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-27 18:08:17 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 18:08:17 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-27 18:08:17 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 18:08:17 +0100
+
+
+Started GET "/produktes?utf8=%E2%9C%93&search=g" for 127.0.0.1 at 2014-11-27 18:08:22 +0100
+Processing by ProduktesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"g"}
+  [1m[36mProdukte Load (1.1ms)[0m  [1mSELECT `produktes`.* FROM `produktes`  WHERE (name LIKE '%g%')[0m
+  Rendered produktes/index.html.erb within layouts/application (2.2ms)
+  Rendered produktes/_footer.html.erb (0.0ms)
+Completed 200 OK in 41ms (Views: 38.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-27 18:08:22 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-27 18:08:22 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 18:08:22 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 18:08:22 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 18:08:22 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-27 18:08:22 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-27 18:08:22 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 18:08:22 +0100
+
+
+Started GET "/produktes?utf8=%E2%9C%93&search=c" for 127.0.0.1 at 2014-11-27 18:08:26 +0100
+Processing by ProduktesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"c"}
+  [1m[35mProdukte Load (0.4ms)[0m  SELECT `produktes`.* FROM `produktes`  WHERE (name LIKE '%c%')
+  Rendered produktes/index.html.erb within layouts/application (1.4ms)
+  Rendered produktes/_footer.html.erb (0.0ms)
+Completed 200 OK in 49ms (Views: 47.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-27 18:08:26 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-27 18:08:26 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 18:08:26 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-27 18:08:26 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 18:08:26 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 18:08:26 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-27 18:08:26 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 18:08:26 +0100
+
+
+Started GET "/produktes?utf8=%E2%9C%93&search=c" for 127.0.0.1 at 2014-11-27 18:09:08 +0100
+Processing by ProduktesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"c"}
+  [1m[36mProdukte Load (0.5ms)[0m  [1mSELECT `produktes`.* FROM `produktes`  WHERE (name LIKE '%c%')[0m
+  Rendered produktes/index.html.erb within layouts/application (2.0ms)
+  Rendered produktes/_footer.html.erb (0.1ms)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 18:09:08 +0100
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-27 18:09:08 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 18:09:09 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 18:09:09 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-27 18:09:09 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-27 18:09:09 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-27 18:09:09 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 18:09:09 +0100
+
+
+Started GET "/produktes/new" for 127.0.0.1 at 2014-11-27 18:09:12 +0100
+Processing by ProduktesController#new as HTML
+  Rendered produktes/_form.html.erb (27.3ms)
+  Rendered produktes/new.html.erb within layouts/application (28.7ms)
+  Rendered produktes/_footer.html.erb (0.4ms)
+Completed 200 OK in 77ms (Views: 76.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/produktes?utf8=%E2%9C%93&search=as" for 127.0.0.1 at 2014-11-27 18:09:21 +0100
+Processing by ProduktesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"as"}
+  [1m[35mProdukte Load (0.5ms)[0m  SELECT `produktes`.* FROM `produktes`  WHERE (name LIKE '%as%')
+  Rendered produktes/index.html.erb within layouts/application (3.3ms)
+  Rendered produktes/_footer.html.erb (0.1ms)
+Completed 200 OK in 42ms (Views: 40.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-27 18:09:21 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-27 18:09:21 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 18:09:21 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-27 18:09:21 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 18:09:21 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 18:09:21 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-27 18:09:21 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 18:09:21 +0100
+
+
+Started GET "/produktes/6" for 127.0.0.1 at 2014-11-27 18:09:40 +0100
+Processing by ProduktesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProdukte Load (0.6ms)[0m  [1mSELECT  `produktes`.* FROM `produktes`  WHERE `produktes`.`id` = 6 LIMIT 1[0m
+  Rendered produktes/show.html.erb within layouts/application (2.3ms)
+  Rendered produktes/_footer.html.erb (0.0ms)
+Completed 200 OK in 43ms (Views: 40.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/produktes" for 127.0.0.1 at 2014-11-27 18:09:47 +0100
+Processing by ProduktesController#index as HTML
+  [1m[35mProdukte Load (0.5ms)[0m  SELECT `produktes`.* FROM `produktes`
+  Rendered produktes/index.html.erb within layouts/application (5.2ms)
+  Rendered produktes/_footer.html.erb (0.1ms)
+Completed 200 OK in 55ms (Views: 53.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/produktes/6" for 127.0.0.1 at 2014-11-27 18:09:53 +0100
+Processing by ProduktesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProdukte Load (0.6ms)[0m  [1mSELECT  `produktes`.* FROM `produktes`  WHERE `produktes`.`id` = 6 LIMIT 1[0m
+  Rendered produktes/show.html.erb within layouts/application (1.4ms)
+  Rendered produktes/_footer.html.erb (0.1ms)
+Completed 200 OK in 39ms (Views: 37.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/produktes" for 127.0.0.1 at 2014-11-27 18:09:58 +0100
+Processing by ProduktesController#index as HTML
+  [1m[35mProdukte Load (0.4ms)[0m  SELECT `produktes`.* FROM `produktes`
+  Rendered produktes/index.html.erb within layouts/application (2.6ms)
+  Rendered produktes/_footer.html.erb (0.1ms)
+Completed 200 OK in 36ms (Views: 34.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/produktes" for 127.0.0.1 at 2014-11-27 18:30:42 +0100
+Processing by ProduktesController#index as HTML
+  [1m[36mProdukte Load (0.5ms)[0m  [1mSELECT `produktes`.* FROM `produktes`[0m
+  Rendered produktes/index.html.erb within layouts/application (2.5ms)
+  Rendered produktes/_footer.html.erb (0.0ms)
+Completed 200 OK in 43ms (Views: 41.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-27 18:30:42 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 18:30:42 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 18:30:42 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-27 18:30:42 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 18:30:42 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 18:30:42 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-27 18:30:42 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-27 18:30:42 +0100
+
+
+Started GET "/produktes" for 127.0.0.1 at 2014-11-27 18:31:23 +0100
+Processing by ProduktesController#index as HTML
+  [1m[35mProdukte Load (0.5ms)[0m  SELECT `produktes`.* FROM `produktes`
+  Rendered produktes/index.html.erb within layouts/application (3.9ms)
+  Rendered produktes/_footer.html.erb (0.0ms)
+Completed 200 OK in 39ms (Views: 38.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-27 18:31:23 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-27 18:31:23 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 18:31:23 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 18:31:23 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 18:31:23 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-27 18:31:23 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-27 18:31:23 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 18:31:23 +0100
+
+
+Started GET "/produktes" for 127.0.0.1 at 2014-11-27 18:31:44 +0100
+Processing by ProduktesController#index as HTML
+  [1m[36mProdukte Load (0.5ms)[0m  [1mSELECT `produktes`.* FROM `produktes`[0m
+  Rendered produktes/index.html.erb within layouts/application (3.5ms)
+  Rendered produktes/_footer.html.erb (0.0ms)
+Completed 200 OK in 41ms (Views: 39.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 18:31:44 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 18:31:44 +0100
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-27 18:31:44 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-27 18:31:44 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-27 18:31:44 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 18:31:44 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-27 18:31:44 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 18:31:44 +0100
+
+
+Started GET "/produktes/6" for 127.0.0.1 at 2014-11-27 18:31:47 +0100
+Processing by ProduktesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mProdukte Load (0.5ms)[0m  SELECT  `produktes`.* FROM `produktes`  WHERE `produktes`.`id` = 6 LIMIT 1
+  Rendered produktes/show.html.erb within layouts/application (2.4ms)
+  Rendered produktes/_footer.html.erb (0.0ms)
+Completed 200 OK in 47ms (Views: 44.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/produktes/6" for 127.0.0.1 at 2014-11-27 18:32:59 +0100
+Processing by ProduktesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProdukte Load (0.4ms)[0m  [1mSELECT  `produktes`.* FROM `produktes`  WHERE `produktes`.`id` = 6 LIMIT 1[0m
+  Rendered produktes/show.html.erb within layouts/application (3.4ms)
+  Rendered produktes/_footer.html.erb (0.0ms)
+Completed 200 OK in 41ms (Views: 39.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-27 18:32:59 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-27 18:32:59 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-27 18:32:59 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 18:32:59 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 18:32:59 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 18:32:59 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-27 18:32:59 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 18:32:59 +0100
+
+
+Started GET "/produktes" for 127.0.0.1 at 2014-11-27 18:33:01 +0100
+Processing by ProduktesController#index as HTML
+  [1m[35mProdukte Load (0.5ms)[0m  SELECT `produktes`.* FROM `produktes`
+  Rendered produktes/index.html.erb within layouts/application (3.8ms)
+  Rendered produktes/_footer.html.erb (0.0ms)
+Completed 200 OK in 51ms (Views: 49.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/produktes/new" for 127.0.0.1 at 2014-11-27 18:33:03 +0100
+Processing by ProduktesController#new as HTML
+  Rendered produktes/_form.html.erb (6.8ms)
+  Rendered produktes/new.html.erb within layouts/application (7.9ms)
+  Rendered produktes/_footer.html.erb (0.0ms)
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/produktes?utf8=%E2%9C%93&search=asdf" for 127.0.0.1 at 2014-11-27 18:34:37 +0100
+Processing by ProduktesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"asdf"}
+  [1m[36mProdukte Load (0.4ms)[0m  [1mSELECT `produktes`.* FROM `produktes`  WHERE (name LIKE '%asdf%')[0m
+  Rendered produktes/index.html.erb within layouts/application (3.4ms)
+  Rendered produktes/_footer.html.erb (0.0ms)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-27 18:34:38 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-27 18:34:38 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 18:34:38 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 18:34:38 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-27 18:34:38 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 18:34:38 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 18:34:38 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-27 18:34:38 +0100
+
+
+Started DELETE "/produktes/6" for 127.0.0.1 at 2014-11-27 18:34:41 +0100
+Processing by ProduktesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rUZWc5fvg/2ixyk0ismvbNPwOAScHzsI4Cfi7uwvEXA=", "id"=>"6"}
+  [1m[35mProdukte Load (0.4ms)[0m  SELECT  `produktes`.* FROM `produktes`  WHERE `produktes`.`id` = 6 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM `produktes` WHERE `produktes`.`id` = 6
+  [1m[36m (4.9ms)[0m  [1mCOMMIT[0m
+[paperclip] deleting /home/alex/github/BWL2/public/system/bilds/6/original/antrieb.jpg
+[paperclip] deleting /home/alex/github/BWL2/public/system/bilds/6/larger/antrieb.jpg
+[paperclip] deleting /home/alex/github/BWL2/public/system/bilds/6/medium/antrieb.jpg
+[paperclip] deleting /home/alex/github/BWL2/public/system/bilds/6/thumb/antrieb.jpg
+Redirected to http://localhost:3000/produktes
+Completed 302 Found in 16ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/produktes" for 127.0.0.1 at 2014-11-27 18:34:41 +0100
+Processing by ProduktesController#index as HTML
+  [1m[35mProdukte Load (0.4ms)[0m  SELECT `produktes`.* FROM `produktes`
+  Rendered produktes/index.html.erb within layouts/application (1.2ms)
+  Rendered produktes/_footer.html.erb (0.0ms)
+Completed 200 OK in 48ms (Views: 47.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-27 18:34:42 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-27 18:34:42 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 18:34:42 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 18:34:42 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 18:34:42 +0100
+
+
+Started GET "/assets/produktes.js?body=1" for 127.0.0.1 at 2014-11-27 18:34:42 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 18:34:42 +0100
+
+
+Started GET "/assets/produktes.css?body=1" for 127.0.0.1 at 2014-11-27 18:34:42 +0100
+
+
+Started GET "/produktes/new" for 127.0.0.1 at 2014-11-27 18:35:41 +0100
+Processing by ProduktesController#new as HTML
+  Rendered produktes/_form.html.erb (5.3ms)
+  Rendered produktes/new.html.erb within layouts/application (5.9ms)
+  Rendered produktes/_footer.html.erb (0.1ms)
+Completed 200 OK in 41ms (Views: 40.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/produktes/new" for 127.0.0.1 at 2014-11-28 13:15:35 +0100
+Processing by ProduktesController#new as HTML
+  Rendered produktes/_form.html.erb (5.4ms)
+  Rendered produktes/new.html.erb within layouts/application (6.4ms)
+  Rendered produktes/_footer.html.erb (0.0ms)
+Completed 200 OK in 49ms (Views: 48.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/produktes/new" for 127.0.0.1 at 2014-11-28 13:15:41 +0100
+Processing by ProduktesController#new as HTML
+  Rendered produktes/_form.html.erb (6.6ms)
+  Rendered produktes/new.html.erb within layouts/application (7.4ms)
+  Rendered produktes/_footer.html.erb (0.0ms)
+Completed 200 OK in 44ms (Views: 43.2ms | ActiveRecord: 0.0ms)

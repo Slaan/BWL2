@@ -7,8 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<h1> Spaceshop <h2>
+<%= form_tag(produktes_path, :method => "get", id: "search-form") do |i|%>
+    <%= text_field_tag :search, params[:search], placeholder: "Suche nach Ware" %>
+    <%= submit_tag "Suche", :name => nil %>
+<% end %>
+ 
 <%= yield %>
 
+<%= render "footer" %>
 </body>
 </html>
