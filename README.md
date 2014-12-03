@@ -1,11 +1,7 @@
-BWL2
-====
-Betriebswirtschaftslehre für Informatik 2
+# BWL2
+Betriebswirtschaftslehre 2 fuer Informatik
 
-
-Install
-=======
-Arch Linux:
+## Arch Linux:
 
     sudo pacman -S mysql ruby nodejs
     gem install rails mysql

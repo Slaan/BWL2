@@ -14,7 +14,7 @@ default: &default
   encoding: utf8
   pool: 5
   username: root
-  password: pferd
+  password: pferd 
   socket: /var/run/mysqld/mysqld.sock
 
 development:
@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: spaceshop_production
-  username: root
-  password: pferd
+  username: spaceshop
+  password: <%= ENV['SPACESHOP_DATABASE_PASSWORD'] %>

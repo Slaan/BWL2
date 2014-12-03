@@ -11,29 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141112163400) do
+ActiveRecord::Schema.define(version: 20141203102107) do
 
-  create_table "besteht_aus", force: true do |t|
-    t.integer  "ganzes_id",    null: false
-    t.integer  "teil_id",      null: false
-    t.integer  "bestandteile"
+  create_table "productrelations", force: true do |t|
+    t.integer  "amount"
+    t.integer  "super_id"
+    t.integer  "sub_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "produktes", force: true do |t|
+  create_table "products", force: true do |t|
     t.string   "name"
-    t.string   "beschreibung"
-    t.integer  "preis"
-    t.integer  "stueckzahl"
-    t.date     "datumvon"
-    t.date     "datumbis"
+    t.string   "description"
+    t.integer  "price"
+    t.integer  "amount"
+    t.date     "since"
+    t.date     "until"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "bild_file_name"
-    t.string   "bild_content_type"
-    t.integer  "bild_file_size"
-    t.datetime "bild_updated_at"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
   end
 
 end

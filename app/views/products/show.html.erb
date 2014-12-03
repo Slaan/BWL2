@@ -1,0 +1,43 @@
+<h2>Produktbeschreibung</h2>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <%= image_tag @product.picture.url :larger %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @product.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @product.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @product.price %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @product.amount %>
+</p>
+
+<p>
+  <strong>Since:</strong>
+  <%= @product.since %>
+</p>
+
+<p>
+  <strong>Until:</strong>
+  <%= @product.until %>
+</p>
+
+<p>
+ <strong>Quantity:</strong>
+ <%= render 'quantity', :product => @product %>
+</p>
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
