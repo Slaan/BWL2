@@ -8,13 +8,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<h1>Spaceshop</h1>
+<h1><%= link_to "Spaceshop", products_path %></h1>
 <div> 
   <%= form_tag(products_path, :method => "get", id: "search-form") do |i|%>
-    <%= text_field_tag :search, params[:search], placeholder: "Suche nach Ware" %>
-    <%= submit_tag "Suche", :name => nil %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search for product" %>
+    <%= submit_tag "Search", :name => nil %>
   <% end %>
-  <%= button_to "Clean", products_path, method: :get%>
 </div>
 
 <%= yield %>

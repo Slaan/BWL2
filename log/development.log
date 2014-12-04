@@ -4549,3 +4549,971 @@ Processing by ProductsController#index as HTML
   Rendered products/index.html.erb within layouts/application (8.0ms)
   Rendered products/_footer.html.erb (0.1ms)
 Completed 200 OK in 42ms (Views: 41.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-03 20:48:16 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (20.1ms)
+  Rendered products/_footer.html.erb (0.3ms)
+Completed 200 OK in 113ms (Views: 96.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-12-03 20:48:17 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-03 20:48:17 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-03 20:48:17 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-03 20:48:17 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-03 20:48:17 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-03 20:48:17 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-12-03 20:48:17 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-03 20:48:17 +0100
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2014-12-03 20:49:57 +0100
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT  `products`.* FROM `products`  WHERE `products`.`id` = 1 LIMIT 1[0m
+  Rendered products/_form.html.erb (21.1ms)
+  Rendered products/edit.html.erb within layouts/application (22.6ms)
+  Rendered products/_footer.html.erb (0.4ms)
+Completed 200 OK in 101ms (Views: 96.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2014-12-03 20:50:08 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.5ms)[0m  SELECT  `products`.* FROM `products`  WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProductrelation Load (0.3ms)[0m  [1mSELECT `productrelations`.* FROM `productrelations`  WHERE `productrelations`.`super_id` = 1[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT  `products`.* FROM `products`  WHERE `products`.`id` = 3 LIMIT 1
+  [1m[36mProduct Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM `products` INNER JOIN `productrelations` ON `products`.`id` = `productrelations`.`sub_id` WHERE `productrelations`.`super_id` = 3 LIMIT 1[0m
+  Rendered products/_quantity.html.erb (35.6ms)
+  Rendered products/show.html.erb within layouts/application (38.9ms)
+  Rendered products/_footer.html.erb (0.0ms)
+Completed 200 OK in 77ms (Views: 71.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2014-12-03 20:51:28 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.5ms)[0m  SELECT  `products`.* FROM `products`  WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProductrelation Load (0.5ms)[0m  [1mSELECT `productrelations`.* FROM `productrelations`  WHERE `productrelations`.`super_id` = 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  `products`.* FROM `products`  WHERE `products`.`id` = 3 LIMIT 1
+  [1m[36mProduct Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `products` INNER JOIN `productrelations` ON `products`.`id` = `productrelations`.`sub_id` WHERE `productrelations`.`super_id` = 3 LIMIT 1[0m
+  Rendered products/_quantity.html.erb (4.6ms)
+  Rendered products/show.html.erb within layouts/application (7.7ms)
+  Rendered products/_footer.html.erb (0.1ms)
+Completed 200 OK in 47ms (Views: 43.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-12-03 20:51:28 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-03 20:51:28 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-03 20:51:28 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-03 20:51:28 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-03 20:51:28 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-03 20:51:28 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-12-03 20:51:28 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-03 20:51:28 +0100
+
+
+Started GET "/products" for 127.0.0.1 at 2014-12-03 20:51:38 +0100
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (6.9ms)
+  Rendered products/_footer.html.erb (0.1ms)
+Completed 200 OK in 55ms (Views: 53.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-03 20:51:38 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-03 20:51:38 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-03 20:51:38 +0100
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-12-03 20:51:38 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-03 20:51:38 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-03 20:51:38 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-12-03 20:51:38 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-03 20:51:38 +0100
+
+
+Started GET "/products" for 127.0.0.1 at 2014-12-03 20:52:26 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (6.2ms)
+  Rendered products/_footer.html.erb (0.0ms)
+Completed 200 OK in 43ms (Views: 41.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-03 20:52:26 +0100
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-12-03 20:52:26 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-03 20:52:27 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-03 20:52:27 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-03 20:52:27 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-03 20:52:27 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-12-03 20:52:27 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-03 20:52:27 +0100
+
+
+Started GET "/products?utf8=%E2%9C%93&search=penis" for 127.0.0.1 at 2014-12-03 20:53:16 +0100
+Processing by ProductsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"penis"}
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products`  WHERE (name LIKE '%penis%' OR description LIKE '%penis%')
+  Rendered products/index.html.erb within layouts/application (3.9ms)
+  Rendered products/_footer.html.erb (0.1ms)
+Completed 200 OK in 56ms (Views: 54.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-12-03 20:53:16 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-03 20:53:16 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-03 20:53:16 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-12-03 20:53:16 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-03 20:53:16 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-03 20:53:16 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-03 20:53:16 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-03 20:53:16 +0100
+
+
+Started GET "/products" for 127.0.0.1 at 2014-12-03 20:53:18 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (8.6ms)
+  Rendered products/_footer.html.erb (0.0ms)
+Completed 200 OK in 50ms (Views: 48.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-12-03 20:53:18 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-03 20:53:18 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-03 20:53:18 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-03 20:53:18 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-03 20:53:18 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-03 20:53:18 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-12-03 20:53:18 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-03 20:53:18 +0100
+
+
+Started GET "/products/2" for 127.0.0.1 at 2014-12-03 20:53:34 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (0.6ms)[0m  SELECT  `products`.* FROM `products`  WHERE `products`.`id` = 2 LIMIT 1
+  [1m[36mProductrelation Load (0.5ms)[0m  [1mSELECT `productrelations`.* FROM `productrelations`  WHERE `productrelations`.`super_id` = 2[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  `products`.* FROM `products`  WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `products` INNER JOIN `productrelations` ON `products`.`id` = `productrelations`.`sub_id` WHERE `productrelations`.`super_id` = 1 LIMIT 1[0m
+  [1m[35mProductrelation Load (0.4ms)[0m  SELECT `productrelations`.* FROM `productrelations`  WHERE `productrelations`.`super_id` = 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  `products`.* FROM `products`  WHERE `products`.`id` = 3 LIMIT 1[0m
+  [1m[35mProduct Exists (0.5ms)[0m  SELECT  1 AS one FROM `products` INNER JOIN `productrelations` ON `products`.`id` = `productrelations`.`sub_id` WHERE `productrelations`.`super_id` = 3 LIMIT 1
+  Rendered products/_quantity.html.erb (3.4ms)
+  Rendered products/_quantity.html.erb (9.7ms)
+  Rendered products/show.html.erb within layouts/application (12.5ms)
+  Rendered products/_footer.html.erb (0.0ms)
+Completed 200 OK in 52ms (Views: 47.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2014-12-03 20:53:48 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (6.3ms)
+  Rendered products/_footer.html.erb (0.0ms)
+Completed 200 OK in 54ms (Views: 52.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2014-12-03 20:53:50 +0100
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.erb (11.5ms)
+  Rendered products/new.html.erb within layouts/application (13.4ms)
+  Rendered products/_footer.html.erb (0.0ms)
+Completed 200 OK in 52ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2014-12-03 20:54:05 +0100
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xmoi4wZGYShw0j2OhJCLJuC5U6/0PkEmMY9gEd0WMkw=", "product"=>{"name"=>"pferdepferd", "description"=>"kiihwef8y78y", "price"=>"3", "amount"=>"3", "since(1i)"=>"2015", "since(2i)"=>"12", "since(3i)"=>"3", "until(1i)"=>"2014", "until(2i)"=>"12", "until(3i)"=>"3", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00000001ff6a80 @tempfile=#<Tempfile:/tmp/RackMultipart20141203-22044-jdglb>, @original_filename="DSC05212.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[picture]\"; filename=\"DSC05212.JPG\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Product"}
+Command :: file -b --mime '/tmp/ad62b8a155e5dd329723f1e9a5840f8820141203-22044-1rrf69z.JPG'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/ad62b8a155e5dd329723f1e9a5840f8820141203-22044-wqoss5.JPG[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/ad62b8a155e5dd329723f1e9a5840f8820141203-22044-wqoss5.JPG[0]'
+Command :: convert '/tmp/ad62b8a155e5dd329723f1e9a5840f8820141203-22044-wqoss5.JPG[0]' -auto-orient -resize "400x400>" '/tmp/ad62b8a155e5dd329723f1e9a5840f8820141203-22044-wqoss520141203-22044-8syrr6'
+Command :: file -b --mime '/tmp/ad62b8a155e5dd329723f1e9a5840f8820141203-22044-wqoss520141203-22044-8syrr6'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/ad62b8a155e5dd329723f1e9a5840f8820141203-22044-wqoss5.JPG[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/ad62b8a155e5dd329723f1e9a5840f8820141203-22044-wqoss5.JPG[0]'
+Command :: convert '/tmp/ad62b8a155e5dd329723f1e9a5840f8820141203-22044-wqoss5.JPG[0]' -auto-orient -resize "200x200>" '/tmp/ad62b8a155e5dd329723f1e9a5840f8820141203-22044-wqoss520141203-22044-15utr50'
+Command :: file -b --mime '/tmp/ad62b8a155e5dd329723f1e9a5840f8820141203-22044-wqoss520141203-22044-15utr50'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/ad62b8a155e5dd329723f1e9a5840f8820141203-22044-wqoss5.JPG[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/ad62b8a155e5dd329723f1e9a5840f8820141203-22044-wqoss5.JPG[0]'
+Command :: convert '/tmp/ad62b8a155e5dd329723f1e9a5840f8820141203-22044-wqoss5.JPG[0]' -auto-orient -resize "100x100>" '/tmp/ad62b8a155e5dd329723f1e9a5840f8820141203-22044-wqoss520141203-22044-13en4qr'
+Command :: file -b --mime '/tmp/ad62b8a155e5dd329723f1e9a5840f8820141203-22044-wqoss520141203-22044-13en4qr'
+  [1m[35m (0.2ms)[0m  BEGIN
+Command :: file -b --mime '/tmp/ad62b8a155e5dd329723f1e9a5840f8820141203-22044-hlmef9.JPG'
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `products` (`amount`, `created_at`, `description`, `name`, `picture_content_type`, `picture_file_name`, `picture_file_size`, `picture_updated_at`, `price`, `since`, `until`, `updated_at`) VALUES (3, '2014-12-03 19:54:08', 'kiihwef8y78y', 'pferdepferd', 'image/jpeg', 'DSC05212.JPG', 4587520, '2014-12-03 19:54:05', 3, '2015-12-03', '2014-12-03', '2014-12-03 19:54:08')[0m
+  [1m[35m (5.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/products/4
+Completed 302 Found in 3208ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/products/4" for 127.0.0.1 at 2014-12-03 20:54:08 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  `products`.* FROM `products`  WHERE `products`.`id` = 4 LIMIT 1[0m
+  [1m[35mProductrelation Load (0.4ms)[0m  SELECT `productrelations`.* FROM `productrelations`  WHERE `productrelations`.`super_id` = 4
+  Rendered products/_quantity.html.erb (1.4ms)
+  Rendered products/show.html.erb within layouts/application (3.9ms)
+  Rendered products/_footer.html.erb (0.1ms)
+Completed 200 OK in 41ms (Views: 38.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-12-03 20:54:08 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-03 20:54:08 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-03 20:54:08 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-03 20:54:08 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-03 20:54:08 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-03 20:54:08 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-12-03 20:54:08 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-03 20:54:08 +0100
+
+
+Started GET "/products" for 127.0.0.1 at 2014-12-03 20:54:18 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (8.1ms)
+  Rendered products/_footer.html.erb (0.1ms)
+Completed 200 OK in 43ms (Views: 41.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-03 20:54:18 +0100
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-12-03 20:54:18 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-03 20:54:18 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-03 20:54:18 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-03 20:54:18 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-03 20:54:18 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-12-03 20:54:18 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-03 20:54:18 +0100
+
+
+Started GET "/products?utf8=%E2%9C%93&search=depf" for 127.0.0.1 at 2014-12-03 20:54:30 +0100
+Processing by ProductsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"depf"}
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products`  WHERE (name LIKE '%depf%' OR description LIKE '%depf%')
+  Rendered products/index.html.erb within layouts/application (3.3ms)
+  Rendered products/_footer.html.erb (0.0ms)
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-12-03 20:54:30 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-03 20:54:30 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-03 20:54:30 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-03 20:54:30 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-03 20:54:30 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-03 20:54:30 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-12-03 20:54:30 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-03 20:54:30 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-04 11:31:50 +0100
+
+Mysql2::Error (Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2 "No such file or directory")):
+  mysql2 (0.3.17) lib/mysql2/client.rb:70:in `connect'
+  mysql2 (0.3.17) lib/mysql2/client.rb:70:in `initialize'
+  activerecord (4.1.6) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.1.6) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+  /usr/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /usr/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  activerecord (4.1.6) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.1.6) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.1.6) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-04 11:31:59 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (2.9ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (2.5ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (33.3ms)
+  Rendered products/_footer.html.erb (0.3ms)
+Completed 200 OK in 122ms (Views: 103.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-12-04 11:32:00 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-04 11:32:00 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-04 11:32:00 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-12-04 11:32:00 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-04 11:32:00 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-04 11:32:00 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-04 11:32:00 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-04 11:32:00 +0100
+
+
+Started GET "/products/1" for 127.0.0.1 at 2014-12-04 11:32:03 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (1.1ms)[0m  [1mSELECT  `products`.* FROM `products`  WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProductrelation Load (0.4ms)[0m  SELECT `productrelations`.* FROM `productrelations`  WHERE `productrelations`.`super_id` = 1
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT  `products`.* FROM `products`  WHERE `products`.`id` = 3 LIMIT 1[0m
+  [1m[35mProduct Exists (0.9ms)[0m  SELECT  1 AS one FROM `products` INNER JOIN `productrelations` ON `products`.`id` = `productrelations`.`sub_id` WHERE `productrelations`.`super_id` = 3 LIMIT 1
+  Rendered products/_quantity.html.erb (45.4ms)
+  Rendered products/show.html.erb within layouts/application (49.4ms)
+  Rendered products/_footer.html.erb (0.4ms)
+Completed 200 OK in 133ms (Views: 122.6ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/products/3" for 127.0.0.1 at 2014-12-04 11:32:05 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT  `products`.* FROM `products`  WHERE `products`.`id` = 3 LIMIT 1[0m
+  [1m[35mProductrelation Load (0.5ms)[0m  SELECT `productrelations`.* FROM `productrelations`  WHERE `productrelations`.`super_id` = 3
+  Rendered products/_quantity.html.erb (1.4ms)
+  Rendered products/show.html.erb within layouts/application (4.1ms)
+  Rendered products/_footer.html.erb (0.0ms)
+Completed 200 OK in 42ms (Views: 39.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2014-12-04 11:32:07 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (9.0ms)
+  Rendered products/_footer.html.erb (0.0ms)
+Completed 200 OK in 47ms (Views: 45.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2014-12-04 11:32:10 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (0.6ms)[0m  SELECT  `products`.* FROM `products`  WHERE `products`.`id` = 2 LIMIT 1
+  [1m[36mProductrelation Load (0.4ms)[0m  [1mSELECT `productrelations`.* FROM `productrelations`  WHERE `productrelations`.`super_id` = 2[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  `products`.* FROM `products`  WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `products` INNER JOIN `productrelations` ON `products`.`id` = `productrelations`.`sub_id` WHERE `productrelations`.`super_id` = 1 LIMIT 1[0m
+  [1m[35mProductrelation Load (0.3ms)[0m  SELECT `productrelations`.* FROM `productrelations`  WHERE `productrelations`.`super_id` = 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  `products`.* FROM `products`  WHERE `products`.`id` = 3 LIMIT 1[0m
+  [1m[35mProduct Exists (0.4ms)[0m  SELECT  1 AS one FROM `products` INNER JOIN `productrelations` ON `products`.`id` = `productrelations`.`sub_id` WHERE `productrelations`.`super_id` = 3 LIMIT 1
+  Rendered products/_quantity.html.erb (3.7ms)
+  Rendered products/_quantity.html.erb (9.0ms)
+  Rendered products/show.html.erb within layouts/application (11.5ms)
+  Rendered products/_footer.html.erb (0.1ms)
+Completed 200 OK in 63ms (Views: 57.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2014-12-04 11:32:22 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (8.8ms)
+  Rendered products/_footer.html.erb (0.0ms)
+Completed 200 OK in 47ms (Views: 45.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/4" for 127.0.0.1 at 2014-12-04 11:32:34 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mProduct Load (0.5ms)[0m  SELECT  `products`.* FROM `products`  WHERE `products`.`id` = 4 LIMIT 1
+  [1m[36mProductrelation Load (0.4ms)[0m  [1mSELECT `productrelations`.* FROM `productrelations`  WHERE `productrelations`.`super_id` = 4[0m
+  Rendered products/_quantity.html.erb (1.3ms)
+  Rendered products/show.html.erb within layouts/application (3.8ms)
+  Rendered products/_footer.html.erb (0.0ms)
+Completed 200 OK in 41ms (Views: 38.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2014-12-04 11:32:35 +0100
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (8.5ms)
+  Rendered products/_footer.html.erb (0.0ms)
+Completed 200 OK in 51ms (Views: 49.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2014-12-04 11:32:36 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT  `products`.* FROM `products`  WHERE `products`.`id` = 2 LIMIT 1[0m
+  [1m[35mProductrelation Load (0.5ms)[0m  SELECT `productrelations`.* FROM `productrelations`  WHERE `productrelations`.`super_id` = 2
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  `products`.* FROM `products`  WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Exists (0.5ms)[0m  SELECT  1 AS one FROM `products` INNER JOIN `productrelations` ON `products`.`id` = `productrelations`.`sub_id` WHERE `productrelations`.`super_id` = 1 LIMIT 1
+  [1m[36mProductrelation Load (0.4ms)[0m  [1mSELECT `productrelations`.* FROM `productrelations`  WHERE `productrelations`.`super_id` = 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  `products`.* FROM `products`  WHERE `products`.`id` = 3 LIMIT 1
+  [1m[36mProduct Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `products` INNER JOIN `productrelations` ON `products`.`id` = `productrelations`.`sub_id` WHERE `productrelations`.`super_id` = 3 LIMIT 1[0m
+  Rendered products/_quantity.html.erb (3.9ms)
+  Rendered products/_quantity.html.erb (8.6ms)
+  Rendered products/show.html.erb within layouts/application (10.7ms)
+  Rendered products/_footer.html.erb (0.1ms)
+Completed 200 OK in 52ms (Views: 47.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2014-12-04 11:32:40 +0100
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (11.2ms)
+  Rendered products/_footer.html.erb (0.1ms)
+Completed 200 OK in 48ms (Views: 46.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2014-12-04 11:32:42 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  `products`.* FROM `products`  WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProductrelation Load (0.4ms)[0m  SELECT `productrelations`.* FROM `productrelations`  WHERE `productrelations`.`super_id` = 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  `products`.* FROM `products`  WHERE `products`.`id` = 3 LIMIT 1[0m
+  [1m[35mProduct Exists (0.4ms)[0m  SELECT  1 AS one FROM `products` INNER JOIN `productrelations` ON `products`.`id` = `productrelations`.`sub_id` WHERE `productrelations`.`super_id` = 3 LIMIT 1
+  Rendered products/_quantity.html.erb (4.3ms)
+  Rendered products/show.html.erb within layouts/application (6.9ms)
+  Rendered products/_footer.html.erb (0.1ms)
+Completed 200 OK in 51ms (Views: 47.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2014-12-04 11:32:44 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (7.9ms)
+  Rendered products/_footer.html.erb (0.0ms)
+Completed 200 OK in 43ms (Views: 41.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2014-12-04 11:33:02 +0100
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (9.4ms)
+  Rendered products/_footer.html.erb (0.1ms)
+Completed 200 OK in 45ms (Views: 44.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-04 11:33:02 +0100
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-12-04 11:33:02 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-04 11:33:02 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-04 11:33:02 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-04 11:33:02 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-04 11:33:02 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-12-04 11:33:02 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-04 11:33:02 +0100
+
+
+Started GET "/products/1" for 127.0.0.1 at 2014-12-04 11:33:04 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT  `products`.* FROM `products`  WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProductrelation Load (0.5ms)[0m  SELECT `productrelations`.* FROM `productrelations`  WHERE `productrelations`.`super_id` = 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  `products`.* FROM `products`  WHERE `products`.`id` = 3 LIMIT 1[0m
+  [1m[35mProduct Exists (0.4ms)[0m  SELECT  1 AS one FROM `products` INNER JOIN `productrelations` ON `products`.`id` = `productrelations`.`sub_id` WHERE `productrelations`.`super_id` = 3 LIMIT 1
+  Rendered products/_quantity.html.erb (5.3ms)
+  Rendered products/show.html.erb within layouts/application (9.1ms)
+  Rendered products/_footer.html.erb (0.0ms)
+Completed 200 OK in 60ms (Views: 56.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2014-12-04 11:33:06 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (8.7ms)
+  Rendered products/_footer.html.erb (0.0ms)
+Completed 200 OK in 48ms (Views: 46.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2014-12-04 11:33:07 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (0.5ms)[0m  SELECT  `products`.* FROM `products`  WHERE `products`.`id` = 2 LIMIT 1
+  [1m[36mProductrelation Load (0.4ms)[0m  [1mSELECT `productrelations`.* FROM `productrelations`  WHERE `productrelations`.`super_id` = 2[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  `products`.* FROM `products`  WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `products` INNER JOIN `productrelations` ON `products`.`id` = `productrelations`.`sub_id` WHERE `productrelations`.`super_id` = 1 LIMIT 1[0m
+  [1m[35mProductrelation Load (0.3ms)[0m  SELECT `productrelations`.* FROM `productrelations`  WHERE `productrelations`.`super_id` = 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  `products`.* FROM `products`  WHERE `products`.`id` = 3 LIMIT 1[0m
+  [1m[35mProduct Exists (0.3ms)[0m  SELECT  1 AS one FROM `products` INNER JOIN `productrelations` ON `products`.`id` = `productrelations`.`sub_id` WHERE `productrelations`.`super_id` = 3 LIMIT 1
+  Rendered products/_quantity.html.erb (3.4ms)
+  Rendered products/_quantity.html.erb (8.8ms)
+  Rendered products/show.html.erb within layouts/application (11.1ms)
+  Rendered products/_footer.html.erb (0.1ms)
+Completed 200 OK in 53ms (Views: 48.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2014-12-04 11:33:17 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT  `products`.* FROM `products`  WHERE `products`.`id` = 2 LIMIT 1[0m
+  [1m[35mProductrelation Load (0.5ms)[0m  SELECT `productrelations`.* FROM `productrelations`  WHERE `productrelations`.`super_id` = 2
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  `products`.* FROM `products`  WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Exists (0.4ms)[0m  SELECT  1 AS one FROM `products` INNER JOIN `productrelations` ON `products`.`id` = `productrelations`.`sub_id` WHERE `productrelations`.`super_id` = 1 LIMIT 1
+  [1m[36mProductrelation Load (0.3ms)[0m  [1mSELECT `productrelations`.* FROM `productrelations`  WHERE `productrelations`.`super_id` = 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  `products`.* FROM `products`  WHERE `products`.`id` = 3 LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `products` INNER JOIN `productrelations` ON `products`.`id` = `productrelations`.`sub_id` WHERE `productrelations`.`super_id` = 3 LIMIT 1[0m
+  Rendered products/_quantity.html.erb (5.0ms)
+  Rendered products/_quantity.html.erb (12.7ms)
+  Rendered products/show.html.erb within layouts/application (16.6ms)
+  Rendered products/_footer.html.erb (0.0ms)
+Completed 200 OK in 64ms (Views: 59.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-04 11:33:18 +0100
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-12-04 11:33:18 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-04 11:33:18 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-04 11:33:18 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-12-04 11:33:18 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-04 11:33:18 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-04 11:33:18 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-04 11:33:18 +0100
+
+
+Started GET "/products" for 127.0.0.1 at 2014-12-04 11:33:25 +0100
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (7.8ms)
+  Rendered products/_footer.html.erb (0.1ms)
+Completed 200 OK in 46ms (Views: 44.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-12-04 11:33:26 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-04 11:33:26 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-04 11:33:26 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-04 11:33:26 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-04 11:33:26 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-04 11:33:26 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-12-04 11:33:26 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-04 11:33:26 +0100
+
+
+Started GET "/products" for 127.0.0.1 at 2014-12-04 11:33:28 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (8.0ms)
+  Rendered products/_footer.html.erb (0.1ms)
+Completed 200 OK in 54ms (Views: 52.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-04 11:33:28 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-04 11:33:28 +0100
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-12-04 11:33:28 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-04 11:33:28 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-04 11:33:28 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-04 11:33:28 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-12-04 11:33:28 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-04 11:33:28 +0100
+
+
+Started GET "/products" for 127.0.0.1 at 2014-12-04 11:34:26 +0100
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (7.3ms)
+  Rendered products/_footer.html.erb (0.0ms)
+Completed 200 OK in 45ms (Views: 43.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-04 11:34:26 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-04 11:34:26 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-04 11:34:26 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-04 11:34:26 +0100
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-12-04 11:34:26 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-04 11:34:26 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-12-04 11:34:26 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-04 11:34:26 +0100
+
+
+Started GET "/products" for 127.0.0.1 at 2014-12-04 11:34:28 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (7.9ms)
+  Rendered products/_footer.html.erb (0.1ms)
+Completed 200 OK in 47ms (Views: 45.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2014-12-04 11:34:43 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.6ms)[0m  SELECT  `products`.* FROM `products`  WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProductrelation Load (0.7ms)[0m  [1mSELECT `productrelations`.* FROM `productrelations`  WHERE `productrelations`.`super_id` = 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  `products`.* FROM `products`  WHERE `products`.`id` = 3 LIMIT 1
+  [1m[36mProduct Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `products` INNER JOIN `productrelations` ON `products`.`id` = `productrelations`.`sub_id` WHERE `productrelations`.`super_id` = 3 LIMIT 1[0m
+  Rendered products/_quantity.html.erb (5.1ms)
+  Rendered products/show.html.erb within layouts/application (7.4ms)
+  Rendered products/_footer.html.erb (0.0ms)
+Completed 200 OK in 56ms (Views: 52.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2014-12-04 11:34:46 +0100
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (7.8ms)
+  Rendered products/_footer.html.erb (0.0ms)
+Completed 200 OK in 44ms (Views: 42.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2014-12-04 11:34:47 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT  `products`.* FROM `products`  WHERE `products`.`id` = 2 LIMIT 1[0m
+  [1m[35mProductrelation Load (0.4ms)[0m  SELECT `productrelations`.* FROM `productrelations`  WHERE `productrelations`.`super_id` = 2
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  `products`.* FROM `products`  WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Exists (0.4ms)[0m  SELECT  1 AS one FROM `products` INNER JOIN `productrelations` ON `products`.`id` = `productrelations`.`sub_id` WHERE `productrelations`.`super_id` = 1 LIMIT 1
+  [1m[36mProductrelation Load (0.3ms)[0m  [1mSELECT `productrelations`.* FROM `productrelations`  WHERE `productrelations`.`super_id` = 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  `products`.* FROM `products`  WHERE `products`.`id` = 3 LIMIT 1
+  [1m[36mProduct Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `products` INNER JOIN `productrelations` ON `products`.`id` = `productrelations`.`sub_id` WHERE `productrelations`.`super_id` = 3 LIMIT 1[0m
+  Rendered products/_quantity.html.erb (3.6ms)
+  Rendered products/_quantity.html.erb (8.2ms)
+  Rendered products/show.html.erb within layouts/application (10.1ms)
+  Rendered products/_footer.html.erb (0.1ms)
+Completed 200 OK in 59ms (Views: 54.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2014-12-04 11:34:55 +0100
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.6ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (8.4ms)
+  Rendered products/_footer.html.erb (0.0ms)
+Completed 200 OK in 44ms (Views: 42.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products/4" for 127.0.0.1 at 2014-12-04 11:34:56 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT  `products`.* FROM `products`  WHERE `products`.`id` = 4 LIMIT 1[0m
+  [1m[35mProductrelation Load (0.4ms)[0m  SELECT `productrelations`.* FROM `productrelations`  WHERE `productrelations`.`super_id` = 4
+  Rendered products/_quantity.html.erb (1.3ms)
+  Rendered products/show.html.erb within layouts/application (4.1ms)
+  Rendered products/_footer.html.erb (0.0ms)
+Completed 200 OK in 42ms (Views: 39.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2014-12-04 11:34:58 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (8.8ms)
+  Rendered products/_footer.html.erb (0.0ms)
+Completed 200 OK in 52ms (Views: 50.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/3" for 127.0.0.1 at 2014-12-04 11:35:02 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mProduct Load (0.6ms)[0m  SELECT  `products`.* FROM `products`  WHERE `products`.`id` = 3 LIMIT 1
+  [1m[36mProductrelation Load (0.5ms)[0m  [1mSELECT `productrelations`.* FROM `productrelations`  WHERE `productrelations`.`super_id` = 3[0m
+  Rendered products/_quantity.html.erb (1.4ms)
+  Rendered products/show.html.erb within layouts/application (4.2ms)
+  Rendered products/_footer.html.erb (0.0ms)
+Completed 200 OK in 44ms (Views: 40.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2014-12-04 11:35:06 +0100
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.6ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (10.0ms)
+  Rendered products/_footer.html.erb (0.0ms)
+Completed 200 OK in 46ms (Views: 44.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2014-12-04 11:35:08 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT  `products`.* FROM `products`  WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProductrelation Load (0.4ms)[0m  SELECT `productrelations`.* FROM `productrelations`  WHERE `productrelations`.`super_id` = 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  `products`.* FROM `products`  WHERE `products`.`id` = 3 LIMIT 1[0m
+  [1m[35mProduct Exists (0.3ms)[0m  SELECT  1 AS one FROM `products` INNER JOIN `productrelations` ON `products`.`id` = `productrelations`.`sub_id` WHERE `productrelations`.`super_id` = 3 LIMIT 1
+  Rendered products/_quantity.html.erb (4.2ms)
+  Rendered products/show.html.erb within layouts/application (6.5ms)
+  Rendered products/_footer.html.erb (0.1ms)
+Completed 200 OK in 51ms (Views: 48.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2014-12-04 11:35:11 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (8.0ms)
+  Rendered products/_footer.html.erb (0.0ms)
+Completed 200 OK in 45ms (Views: 43.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2014-12-04 11:35:12 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (0.5ms)[0m  SELECT  `products`.* FROM `products`  WHERE `products`.`id` = 2 LIMIT 1
+  [1m[36mProductrelation Load (0.4ms)[0m  [1mSELECT `productrelations`.* FROM `productrelations`  WHERE `productrelations`.`super_id` = 2[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  `products`.* FROM `products`  WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `products` INNER JOIN `productrelations` ON `products`.`id` = `productrelations`.`sub_id` WHERE `productrelations`.`super_id` = 1 LIMIT 1[0m
+  [1m[35mProductrelation Load (0.3ms)[0m  SELECT `productrelations`.* FROM `productrelations`  WHERE `productrelations`.`super_id` = 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  `products`.* FROM `products`  WHERE `products`.`id` = 3 LIMIT 1[0m
+  [1m[35mProduct Exists (0.3ms)[0m  SELECT  1 AS one FROM `products` INNER JOIN `productrelations` ON `products`.`id` = `productrelations`.`sub_id` WHERE `productrelations`.`super_id` = 3 LIMIT 1
+  Rendered products/_quantity.html.erb (3.6ms)
+  Rendered products/_quantity.html.erb (8.6ms)
+  Rendered products/show.html.erb within layouts/application (10.7ms)
+  Rendered products/_footer.html.erb (0.1ms)
+Completed 200 OK in 49ms (Views: 44.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2014-12-04 11:35:17 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (7.6ms)
+  Rendered products/_footer.html.erb (0.0ms)
+Completed 200 OK in 50ms (Views: 48.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2014-12-04 12:58:35 +0100
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (9.0ms)
+  Rendered products/_footer.html.erb (0.1ms)
+Completed 200 OK in 46ms (Views: 44.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-12-04 12:58:35 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-04 12:58:35 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-12-04 12:58:35 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-04 12:58:35 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-04 12:58:35 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-04 12:58:35 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-04 12:58:35 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-04 12:58:35 +0100

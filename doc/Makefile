@@ -31,3 +31,4 @@ MyDoc.pdf:
 
 clean:
 	latexmk -CA
+	rm *.bbl

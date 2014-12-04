@@ -1,0 +1,16 @@
+\section{Praktikum 2}
+
+\subsection{Vollst\"andiges ER-Modell}
+% Einbinden des ERM
+
+\subsection{Erweiterung der Datenbank}
+Wie im ersten Praktikum erw\"ahnt, muss man in Rails seine Datenbank nicht ber\"uhren. Wir erzeugten f\"ur die geschachtelte Ware ein weiteres Model namens \texttt{productrelation}. Diese besteht aus zwei Fremdschl\"usseln, welche sich auf \texttt{product} beziehen und aus einem Integer namens \texttt{amount}. Das \texttt{amount} dr\"uckt aus, dass das Superproduct aus \texttt{amount} vielen Subproducts besteht. 
+
+\subsection{Dokumentation 2}
+
+\subsubsection{Geschachtelte Ware}
+\texttt{Partials} kann man in Rails als Teilview vermerken. F\"ur h\"aufig auftretende Views kann man sich \texttt{Partials} anlegen und diese dann in einer vollst\"andigen View zusammenwerfen. Zudem kann man auch Argumente \"ubergeben. Wir haben \texttt{Partials} erstellt f\"ur die Ausgabe der Quantit\"at von unseren Raumschiffen. Zu finden ist es unter \texttt{app/views/products/\_quatity.html.erb}. 
+
+\subsubsection{Nutzer und Admins}
+
+
