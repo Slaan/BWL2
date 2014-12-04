@@ -7,17 +7,35 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-<h1><%= link_to "Spaceshop", products_path %></h1>
-<div> 
-  <%= form_tag(products_path, :method => "get", id: "search-form") do |i|%>
-    <%= text_field_tag :search, params[:search], placeholder: "Search for product" %>
-    <%= submit_tag "Search", :name => nil %>
-  <% end %>
-</div>
+<body>      
+  <h1><%= link_to "Spaceshop", products_path %></h1>
+  <div>
+    <%= link_to "Sign up", new_user_path %>
+    <% if not logged_in? %>
+      <%= link_to "Log in", login_path %>
+    <% end %>
+    <% if logged_in? %>
+      <%= link_to "Log out", logout_path, method: :delete%>
+    <% end %>
+    <br>
+    Currently logged in as: 
+    <% if logged_in? %>
+      <%= @current_user.name %>
+    <% else %>
+      <%= "Not logged in" %>
+    <% end %>
+  </div>
 
-<%= yield %>
+  <div> 
+    <%= form_tag(products_path, :method => "get", id: "search-form") do |i|%>
+      <%= text_field_tag :search, params[:search], placeholder: "Search for product" %>
+      <%= submit_tag "Search", :name => nil %>
+    <% end %>
+  </div>
 
-<%= render "footer" %>
+  <%= yield %>
+
+  <hr>
+  Copyright 2014 - 2014 by Alex Mantel, Daniel Hofmeister
 </body>
 </html>
