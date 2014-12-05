@@ -27433,3 +27433,1037 @@ Processing by ProductsController#index as HTML
   Rendered products/index.html.erb within layouts/application (8.4ms)
   [1m[36mUser Load (0.6ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 11 LIMIT 1[0m
 Completed 200 OK in 77ms (Views: 75.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2014-12-05 09:43:12 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.6ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1[0m
+Completed 200 OK in 863ms (Views: 846.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2014-12-05 09:43:13 +0100
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1[0m
+Completed 200 OK in 61ms (Views: 59.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2014-12-05 09:43:27 +0100
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.erb (36.5ms)
+  Rendered products/new.html.erb within layouts/application (40.1ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1
+Completed 200 OK in 114ms (Views: 109.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-12-05 09:43:29 +0100
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (8.8ms)
+  Rendered users/new.html.erb within layouts/application (10.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1[0m
+Completed 200 OK in 75ms (Views: 70.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2014-12-05 09:43:31 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1
+Completed 200 OK in 75ms (Views: 73.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-12-05 09:43:33 +0100
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (3.8ms)
+  Rendered users/new.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1[0m
+Completed 200 OK in 68ms (Views: 66.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2014-12-05 09:43:34 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1
+Completed 200 OK in 68ms (Views: 66.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2014-12-05 09:43:38 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xmoi4wZGYShw0j2OhJCLJuC5U6/0PkEmMY9gEd0WMkw=", "session"=>{"email"=>"123@123.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`email` = '123@123.com' LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1
+Completed 200 OK in 64ms (Views: 61.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/basketpositions.css?body=1" for 127.0.0.1 at 2014-12-05 09:43:38 +0100
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-12-05 09:43:38 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-12-05 09:43:38 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-05 09:43:38 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-05 09:43:38 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-05 09:43:38 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-05 09:43:38 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-05 09:43:38 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-05 09:43:38 +0100
+
+
+Started GET "/assets/basketpositions.js?body=1" for 127.0.0.1 at 2014-12-05 09:43:38 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-12-05 09:43:38 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-12-05 09:43:38 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-05 09:43:38 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-05 09:43:38 +0100
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-12-05 09:43:42 +0100
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (4.6ms)
+  Rendered users/new.html.erb within layouts/application (5.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1[0m
+Completed 200 OK in 71ms (Views: 70.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/basketpositions.css?body=1" for 127.0.0.1 at 2014-12-05 09:43:42 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-05 09:43:42 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-05 09:43:42 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-12-05 09:43:42 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-05 09:43:42 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-05 09:43:42 +0100
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-12-05 09:43:42 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-05 09:43:42 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-05 09:43:42 +0100
+
+
+Started GET "/assets/basketpositions.js?body=1" for 127.0.0.1 at 2014-12-05 09:43:42 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-12-05 09:43:42 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-12-05 09:43:42 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-05 09:43:42 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-05 09:43:42 +0100
+
+
+Started GET "/products" for 127.0.0.1 at 2014-12-05 09:43:43 +0100
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1[0m
+Completed 200 OK in 65ms (Views: 63.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2014-12-05 09:43:44 +0100
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.erb (5.9ms)
+  Rendered products/new.html.erb within layouts/application (7.0ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1
+Completed 200 OK in 74ms (Views: 72.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2014-12-05 09:44:25 +0100
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xmoi4wZGYShw0j2OhJCLJuC5U6/0PkEmMY9gEd0WMkw=", "product"=>{"name"=>"Spaceship 3000", "description"=>"Brighter then every start", "price"=>"7", "amount"=>"5", "since(1i)"=>"2014", "since(2i)"=>"12", "since(3i)"=>"5", "until(1i)"=>"2014", "until(2i)"=>"12", "until(3i)"=>"5", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00000004705b58 @tempfile=#<Tempfile:/tmp/RackMultipart20141205-22243-12r7bmt>, @original_filename="SpaceShip.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[picture]\"; filename=\"SpaceShip.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Product"}
+Command :: file -b --mime '/tmp/f660afc26570a4efd3ff5dda69c50d5020141205-22243-h6t8xa.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/f660afc26570a4efd3ff5dda69c50d5020141205-22243-zbyn0.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/f660afc26570a4efd3ff5dda69c50d5020141205-22243-zbyn0.jpg[0]'
+Command :: convert '/tmp/f660afc26570a4efd3ff5dda69c50d5020141205-22243-zbyn0.jpg[0]' -auto-orient -resize "400x400>" '/tmp/f660afc26570a4efd3ff5dda69c50d5020141205-22243-zbyn020141205-22243-ta4fre'
+Command :: file -b --mime '/tmp/f660afc26570a4efd3ff5dda69c50d5020141205-22243-zbyn020141205-22243-ta4fre'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/f660afc26570a4efd3ff5dda69c50d5020141205-22243-zbyn0.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/f660afc26570a4efd3ff5dda69c50d5020141205-22243-zbyn0.jpg[0]'
+Command :: convert '/tmp/f660afc26570a4efd3ff5dda69c50d5020141205-22243-zbyn0.jpg[0]' -auto-orient -resize "200x200>" '/tmp/f660afc26570a4efd3ff5dda69c50d5020141205-22243-zbyn020141205-22243-1053pu7'
+Command :: file -b --mime '/tmp/f660afc26570a4efd3ff5dda69c50d5020141205-22243-zbyn020141205-22243-1053pu7'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/f660afc26570a4efd3ff5dda69c50d5020141205-22243-zbyn0.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/f660afc26570a4efd3ff5dda69c50d5020141205-22243-zbyn0.jpg[0]'
+Command :: convert '/tmp/f660afc26570a4efd3ff5dda69c50d5020141205-22243-zbyn0.jpg[0]' -auto-orient -resize "100x100>" '/tmp/f660afc26570a4efd3ff5dda69c50d5020141205-22243-zbyn020141205-22243-1vh37j2'
+Command :: file -b --mime '/tmp/f660afc26570a4efd3ff5dda69c50d5020141205-22243-zbyn020141205-22243-1vh37j2'
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/tmp/f660afc26570a4efd3ff5dda69c50d5020141205-22243-1c424us.jpg'
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `products` (`amount`, `created_at`, `description`, `name`, `picture_content_type`, `picture_file_name`, `picture_file_size`, `picture_updated_at`, `price`, `since`, `until`, `updated_at`) VALUES (5, '2014-12-05 08:44:26', 'Brighter then every start', 'Spaceship 3000', 'image/jpeg', 'SpaceShip.jpg', 302862, '2014-12-05 08:44:25', 7, '2014-12-05', '2014-12-05', '2014-12-05 08:44:26')
+  [1m[36m (6.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 422ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2014-12-05 09:44:26 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.5ms)[0m  SELECT  `products`.* FROM `products`  WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProductrelation Load (0.3ms)[0m  [1mSELECT `productrelations`.* FROM `productrelations`  WHERE `productrelations`.`super_id` = 1[0m
+  Rendered products/_quantity.html.erb (13.9ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1
+  Rendered products/_add_to_basket.html.erb (4.1ms)
+  Rendered products/show.html.erb within layouts/application (21.7ms)
+Completed 500 Internal Server Error in 26ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    3:     <strong>Add to basket:</strong><br>
+    4:     <%= f.label "Amount:" %>
+    5:     <%= f.number_field :amount %>
+    6:     <%= f.hidden_field :user_id, :value => current_user.id %>
+    7:     <%= f.hidden_field :product_id, :value => product %>
+    8:     <%= f.submit "Add to cart"%>
+    9:   </div>
+  app/views/products/_add_to_basket.html.erb:6:in `block in _app_views_products__add_to_basket_html_erb__4558172158031424334_30558120'
+  app/views/products/_add_to_basket.html.erb:1:in `_app_views_products__add_to_basket_html_erb__4558172158031424334_30558120'
+  app/views/products/show.html.erb:43:in `_app_views_products_show_html_erb__4392854418563996495_27667300'
+
+
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (8.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2014-12-05 09:45:16 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (4.4ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1
+Completed 200 OK in 75ms (Views: 73.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-05 09:45:16 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-12-05 09:45:16 +0100
+
+
+Started GET "/assets/basketpositions.css?body=1" for 127.0.0.1 at 2014-12-05 09:45:16 +0100
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-12-05 09:45:16 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-05 09:45:16 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-05 09:45:16 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-05 09:45:16 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-05 09:45:16 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-05 09:45:16 +0100
+
+
+Started GET "/assets/basketpositions.js?body=1" for 127.0.0.1 at 2014-12-05 09:45:16 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-12-05 09:45:16 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-12-05 09:45:16 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-05 09:45:16 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-05 09:45:16 +0100
+
+
+Started GET "/products/new" for 127.0.0.1 at 2014-12-05 09:45:21 +0100
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.erb (5.7ms)
+  Rendered products/new.html.erb within layouts/application (6.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1[0m
+Completed 200 OK in 64ms (Views: 62.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2014-12-05 09:45:38 +0100
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xmoi4wZGYShw0j2OhJCLJuC5U6/0PkEmMY9gEd0WMkw=", "product"=>{"name"=>"Screw", "description"=>"Pretty strong", "price"=>"18", "amount"=>"1000000", "since(1i)"=>"2014", "since(2i)"=>"12", "since(3i)"=>"5", "until(1i)"=>"2014", "until(2i)"=>"12", "until(3i)"=>"5", "picture"=>#<ActionDispatch::Http::UploadedFile:0x000000031b0cf8 @tempfile=#<Tempfile:/tmp/RackMultipart20141205-22243-1w2gxqd>, @original_filename="schraube.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[picture]\"; filename=\"schraube.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Product"}
+Command :: file -b --mime '/tmp/6cece31ed5a0d7329183704a3adf403120141205-22243-1j2w0ja.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/6cece31ed5a0d7329183704a3adf403120141205-22243-1yzhywq.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/6cece31ed5a0d7329183704a3adf403120141205-22243-1yzhywq.jpg[0]'
+Command :: convert '/tmp/6cece31ed5a0d7329183704a3adf403120141205-22243-1yzhywq.jpg[0]' -auto-orient -resize "400x400>" '/tmp/6cece31ed5a0d7329183704a3adf403120141205-22243-1yzhywq20141205-22243-1nq130g'
+Command :: file -b --mime '/tmp/6cece31ed5a0d7329183704a3adf403120141205-22243-1yzhywq20141205-22243-1nq130g'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/6cece31ed5a0d7329183704a3adf403120141205-22243-1yzhywq.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/6cece31ed5a0d7329183704a3adf403120141205-22243-1yzhywq.jpg[0]'
+Command :: convert '/tmp/6cece31ed5a0d7329183704a3adf403120141205-22243-1yzhywq.jpg[0]' -auto-orient -resize "200x200>" '/tmp/6cece31ed5a0d7329183704a3adf403120141205-22243-1yzhywq20141205-22243-1hd7q79'
+Command :: file -b --mime '/tmp/6cece31ed5a0d7329183704a3adf403120141205-22243-1yzhywq20141205-22243-1hd7q79'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/6cece31ed5a0d7329183704a3adf403120141205-22243-1yzhywq.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/6cece31ed5a0d7329183704a3adf403120141205-22243-1yzhywq.jpg[0]'
+Command :: convert '/tmp/6cece31ed5a0d7329183704a3adf403120141205-22243-1yzhywq.jpg[0]' -auto-orient -resize "100x100>" '/tmp/6cece31ed5a0d7329183704a3adf403120141205-22243-1yzhywq20141205-22243-1pb03jn'
+Command :: file -b --mime '/tmp/6cece31ed5a0d7329183704a3adf403120141205-22243-1yzhywq20141205-22243-1pb03jn'
+  [1m[35m (0.3ms)[0m  BEGIN
+Command :: file -b --mime '/tmp/6cece31ed5a0d7329183704a3adf403120141205-22243-l15ajy.jpg'
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `products` (`amount`, `created_at`, `description`, `name`, `picture_content_type`, `picture_file_name`, `picture_file_size`, `picture_updated_at`, `price`, `since`, `until`, `updated_at`) VALUES (1000000, '2014-12-05 08:45:39', 'Pretty strong', 'Screw', 'image/jpeg', 'schraube.jpg', 29012, '2014-12-05 08:45:38', 18, '2014-12-05', '2014-12-05', '2014-12-05 08:45:39')[0m
+  [1m[35m (5.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/products/2
+Completed 302 Found in 340ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2014-12-05 09:45:39 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT  `products`.* FROM `products`  WHERE `products`.`id` = 2 LIMIT 1[0m
+  [1m[35mProductrelation Load (0.5ms)[0m  SELECT `productrelations`.* FROM `productrelations`  WHERE `productrelations`.`super_id` = 2
+  Rendered products/_quantity.html.erb (1.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1[0m
+  Rendered products/_add_to_basket.html.erb (2.0ms)
+  Rendered products/show.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    3:     <strong>Add to basket:</strong><br>
+    4:     <%= f.label "Amount:" %>
+    5:     <%= f.number_field :amount %>
+    6:     <%= f.hidden_field :user_id, :value => current_user.id %>
+    7:     <%= f.hidden_field :product_id, :value => product %>
+    8:     <%= f.submit "Add to cart"%>
+    9:   </div>
+  app/views/products/_add_to_basket.html.erb:6:in `block in _app_views_products__add_to_basket_html_erb__4558172158031424334_30558120'
+  app/views/products/_add_to_basket.html.erb:1:in `_app_views_products__add_to_basket_html_erb__4558172158031424334_30558120'
+  app/views/products/show.html.erb:43:in `_app_views_products_show_html_erb__4392854418563996495_27667300'
+
+
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (8.6ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2014-12-05 09:48:22 +0100
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (4.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1[0m
+Completed 200 OK in 66ms (Views: 64.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/basketpositions.css?body=1" for 127.0.0.1 at 2014-12-05 09:48:22 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-05 09:48:22 +0100
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-12-05 09:48:22 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-12-05 09:48:22 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-05 09:48:22 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-05 09:48:22 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-05 09:48:22 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-05 09:48:22 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-05 09:48:22 +0100
+
+
+Started GET "/assets/basketpositions.js?body=1" for 127.0.0.1 at 2014-12-05 09:48:22 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-12-05 09:48:22 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-12-05 09:48:22 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-05 09:48:22 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-05 09:48:22 +0100
+
+
+Started GET "/products/1" for 127.0.0.1 at 2014-12-05 09:48:23 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.5ms)[0m  SELECT  `products`.* FROM `products`  WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProductrelation Load (0.5ms)[0m  [1mSELECT `productrelations`.* FROM `productrelations`  WHERE `productrelations`.`super_id` = 1[0m
+  Rendered products/_quantity.html.erb (2.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1
+  Rendered products/_add_to_basket.html.erb (2.5ms)
+  Rendered products/show.html.erb within layouts/application (18.0ms)
+Completed 500 Internal Server Error in 22ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    3:     <strong>Add to basket:</strong><br>
+    4:     <%= f.label "Amount:" %>
+    5:     <%= f.number_field :amount %>
+    6:     <%= f.hidden_field :user_id, :value => current_user.id %>
+    7:     <%= f.hidden_field :product_id, :value => product %>
+    8:     <%= f.submit "Add to cart"%>
+    9:   </div>
+  app/views/products/_add_to_basket.html.erb:6:in `block in _app_views_products__add_to_basket_html_erb__4558172158031424334_38904600'
+  app/views/products/_add_to_basket.html.erb:1:in `_app_views_products__add_to_basket_html_erb__4558172158031424334_38904600'
+  app/views/products/show.html.erb:43:in `_app_views_products_show_html_erb__4392854418563996495_5895420'
+
+
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (8.0ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2014-12-05 09:48:23 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  `products`.* FROM `products`  WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProductrelation Load (0.4ms)[0m  SELECT `productrelations`.* FROM `productrelations`  WHERE `productrelations`.`super_id` = 1
+  Rendered products/_quantity.html.erb (1.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1[0m
+  Rendered products/_add_to_basket.html.erb (2.5ms)
+  Rendered products/show.html.erb within layouts/application (6.6ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    3:     <strong>Add to basket:</strong><br>
+    4:     <%= f.label "Amount:" %>
+    5:     <%= f.number_field :amount %>
+    6:     <%= f.hidden_field :user_id, :value => current_user.id %>
+    7:     <%= f.hidden_field :product_id, :value => product %>
+    8:     <%= f.submit "Add to cart"%>
+    9:   </div>
+  app/views/products/_add_to_basket.html.erb:6:in `block in _app_views_products__add_to_basket_html_erb__4558172158031424334_30558120'
+  app/views/products/_add_to_basket.html.erb:1:in `_app_views_products__add_to_basket_html_erb__4558172158031424334_30558120'
+  app/views/products/show.html.erb:43:in `_app_views_products_show_html_erb__4392854418563996495_27667300'
+
+
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/alex/.gem/ruby/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.5ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2014-12-05 09:50:12 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  `products`.* FROM `products`  WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProductrelation Load (0.5ms)[0m  [1mSELECT `productrelations`.* FROM `productrelations`  WHERE `productrelations`.`super_id` = 1[0m
+  Rendered products/_quantity.html.erb (1.4ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1
+  Rendered products/show.html.erb within layouts/application (5.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1[0m
+Completed 200 OK in 70ms (Views: 66.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-05 09:50:12 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-05 09:50:12 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-12-05 09:50:12 +0100
+
+
+Started GET "/assets/basketpositions.css?body=1" for 127.0.0.1 at 2014-12-05 09:50:12 +0100
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-12-05 09:50:12 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-05 09:50:12 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-05 09:50:12 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-05 09:50:12 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-05 09:50:12 +0100
+
+
+Started GET "/assets/basketpositions.js?body=1" for 127.0.0.1 at 2014-12-05 09:50:12 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-12-05 09:50:12 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-12-05 09:50:12 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-05 09:50:12 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-05 09:50:12 +0100
+
+
+Started GET "/login" for 127.0.0.1 at 2014-12-05 09:50:20 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1
+Completed 200 OK in 60ms (Views: 58.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-12-05 09:50:21 +0100
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (3.0ms)
+  Rendered users/new.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1[0m
+Completed 200 OK in 70ms (Views: 68.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-12-05 09:50:28 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xmoi4wZGYShw0j2OhJCLJuC5U6/0PkEmMY9gEd0WMkw=", "user"=>{"name"=>"gideon", "email"=>"123@123.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-12-05 08:50:28', '123@123.com', 'gideon', '$2a$10$g3WGvLRuKI6u1/Kv9DNL1.SkAawY5U5r0E3ORs5cAnsXLzmgS4xCi', '2014-12-05 08:50:28')[0m
+  [1m[35m (6.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 80ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-12-05 09:50:28 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1
+Completed 200 OK in 62ms (Views: 59.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/basketpositions.css?body=1" for 127.0.0.1 at 2014-12-05 09:50:28 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-05 09:50:28 +0100
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-12-05 09:50:28 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-12-05 09:50:28 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-05 09:50:28 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-05 09:50:28 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-05 09:50:28 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-05 09:50:28 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-12-05 09:50:28 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-05 09:50:28 +0100
+
+
+Started GET "/assets/basketpositions.js?body=1" for 127.0.0.1 at 2014-12-05 09:50:28 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-12-05 09:50:28 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-05 09:50:28 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-05 09:50:28 +0100
+
+
+Started GET "/login" for 127.0.0.1 at 2014-12-05 09:50:30 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 14 LIMIT 1[0m
+Completed 200 OK in 74ms (Views: 72.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2014-12-05 09:50:32 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xmoi4wZGYShw0j2OhJCLJuC5U6/0PkEmMY9gEd0WMkw=", "session"=>{"email"=>"123@123.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`email` = '123@123.com' LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 70ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-05 09:50:32 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (5.5ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 73ms (Views: 71.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/basketpositions.css?body=1" for 127.0.0.1 at 2014-12-05 09:50:33 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-05 09:50:33 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-05 09:50:33 +0100
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-12-05 09:50:33 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-05 09:50:33 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-12-05 09:50:33 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-05 09:50:33 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-05 09:50:33 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-05 09:50:33 +0100
+
+
+Started GET "/assets/basketpositions.js?body=1" for 127.0.0.1 at 2014-12-05 09:50:33 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-12-05 09:50:33 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-12-05 09:50:33 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-05 09:50:33 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-05 09:50:33 +0100
+
+
+Started GET "/products/1" for 127.0.0.1 at 2014-12-05 09:50:37 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT  `products`.* FROM `products`  WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProductrelation Load (0.3ms)[0m  SELECT `productrelations`.* FROM `productrelations`  WHERE `productrelations`.`super_id` = 1
+  Rendered products/_quantity.html.erb (1.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered products/_add_to_basket.html.erb (2.3ms)
+  Rendered products/show.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 70ms (Views: 66.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2014-12-05 09:51:02 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  `products`.* FROM `products`  WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProductrelation Load (0.5ms)[0m  [1mSELECT `productrelations`.* FROM `productrelations`  WHERE `productrelations`.`super_id` = 1[0m
+  Rendered products/_quantity.html.erb (1.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1 LIMIT 1
+  Rendered products/_add_to_basket.html.erb (11.5ms)
+  Rendered products/show.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 83ms (Views: 79.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-12-05 09:51:02 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-12-05 09:51:03 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-05 09:51:03 +0100
+
+
+Started GET "/assets/basketpositions.css?body=1" for 127.0.0.1 at 2014-12-05 09:51:03 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-05 09:51:03 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-05 09:51:03 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-05 09:51:03 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-05 09:51:03 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-05 09:51:03 +0100
+
+
+Started GET "/assets/basketpositions.js?body=1" for 127.0.0.1 at 2014-12-05 09:51:03 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-12-05 09:51:03 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-12-05 09:51:03 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-05 09:51:03 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-05 09:51:03 +0100
+
+
+Started POST "/products/1" for 127.0.0.1 at 2014-12-05 09:51:05 +0100
+Processing by ProductsController#add_to_basket as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xmoi4wZGYShw0j2OhJCLJuC5U6/0PkEmMY9gEd0WMkw=", "basketposition"=>{"amount"=>"1", "user_id"=>"1", "product_id"=>"1"}, "commit"=>"Add to cart", "id"=>"1"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mBasketposition Exists (0.5ms)[0m  SELECT  1 AS one FROM `basketpositions`  WHERE (`basketpositions`.`user_id` = BINARY 1 AND `basketpositions`.`product_id` = 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `basketpositions` (`created_at`, `how_many`, `product_id`, `updated_at`, `user_id`) VALUES ('2014-12-05 08:51:05', 1, 1, '2014-12-05 08:51:05', 1)[0m
+  [1m[35m (5.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mBasketposition Exists (0.5ms)[0m  SELECT  1 AS one FROM `basketpositions`  WHERE (`basketpositions`.`user_id` = BINARY 1 AND `basketpositions`.`id` != 1 AND `basketpositions`.`product_id` = 1) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 29ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-05 09:51:05 +0100
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (5.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 78ms (Views: 76.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/basketpositions.css?body=1" for 127.0.0.1 at 2014-12-05 09:51:05 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-05 09:51:05 +0100
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-12-05 09:51:05 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-12-05 09:51:05 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-05 09:51:05 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-05 09:51:05 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-05 09:51:05 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-05 09:51:05 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-05 09:51:05 +0100
+
+
+Started GET "/assets/basketpositions.js?body=1" for 127.0.0.1 at 2014-12-05 09:51:05 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-12-05 09:51:05 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-12-05 09:51:05 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-05 09:51:05 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-05 09:51:05 +0100
+
+
+Started GET "/cart" for 127.0.0.1 at 2014-12-05 09:51:06 +0100
+Processing by UsersController#cart as HTML
+  Parameters: {"authenticity_token"=>"Xmoi4wZGYShw0j2OhJCLJuC5U6/0PkEmMY9gEd0WMkw="}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mBasketposition Load (0.3ms)[0m  [1mSELECT `basketpositions`.* FROM `basketpositions`  WHERE `basketpositions`.`user_id` = 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  `products`.* FROM `products`  WHERE `products`.`id` = 1 LIMIT 1
+  Rendered users/cart.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 79ms (Views: 77.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/basketpositions.css?body=1" for 127.0.0.1 at 2014-12-05 09:51:06 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-05 09:51:06 +0100
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-12-05 09:51:06 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-05 09:51:06 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-05 09:51:06 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-12-05 09:51:06 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-05 09:51:06 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-05 09:51:06 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-05 09:51:06 +0100
+
+
+Started GET "/assets/basketpositions.js?body=1" for 127.0.0.1 at 2014-12-05 09:51:06 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-12-05 09:51:06 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-12-05 09:51:06 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-05 09:51:06 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-05 09:51:06 +0100
+
+
+Started GET "/cart" for 127.0.0.1 at 2014-12-05 09:51:09 +0100
+Processing by UsersController#cart as HTML
+  Parameters: {"authenticity_token"=>"Xmoi4wZGYShw0j2OhJCLJuC5U6/0PkEmMY9gEd0WMkw="}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mBasketposition Load (0.3ms)[0m  SELECT `basketpositions`.* FROM `basketpositions`  WHERE `basketpositions`.`user_id` = 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  `products`.* FROM `products`  WHERE `products`.`id` = 1 LIMIT 1[0m
+  Rendered users/cart.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 73ms (Views: 71.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/basketpositions.css?body=1" for 127.0.0.1 at 2014-12-05 09:51:09 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-05 09:51:09 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-05 09:51:09 +0100
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-12-05 09:51:09 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-05 09:51:09 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-12-05 09:51:09 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-05 09:51:09 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-05 09:51:09 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-05 09:51:09 +0100
+
+
+Started GET "/assets/basketpositions.js?body=1" for 127.0.0.1 at 2014-12-05 09:51:09 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-12-05 09:51:09 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-12-05 09:51:09 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-05 09:51:09 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-05 09:51:09 +0100
+
+
+Started GET "/cart" for 127.0.0.1 at 2014-12-05 09:52:40 +0100
+Processing by UsersController#cart as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mBasketposition Load (0.3ms)[0m  [1mSELECT `basketpositions`.* FROM `basketpositions`  WHERE `basketpositions`.`user_id` = 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  `products`.* FROM `products`  WHERE `products`.`id` = 1 LIMIT 1
+  Rendered users/cart.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 64ms (Views: 62.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/basketpositions.css?body=1" for 127.0.0.1 at 2014-12-05 09:52:40 +0100
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-12-05 09:52:40 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-05 09:52:40 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-05 09:52:40 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-05 09:52:40 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-12-05 09:52:40 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-05 09:52:40 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-05 09:52:40 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-05 09:52:40 +0100
+
+
+Started GET "/assets/basketpositions.js?body=1" for 127.0.0.1 at 2014-12-05 09:52:40 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-12-05 09:52:40 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-12-05 09:52:40 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-05 09:52:40 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-05 09:52:40 +0100
+
+
+Started GET "/cart" for 127.0.0.1 at 2014-12-05 09:52:41 +0100
+Processing by UsersController#cart as HTML
+  Parameters: {"authenticity_token"=>"Xmoi4wZGYShw0j2OhJCLJuC5U6/0PkEmMY9gEd0WMkw="}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mBasketposition Load (0.2ms)[0m  SELECT `basketpositions`.* FROM `basketpositions`  WHERE `basketpositions`.`user_id` = 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  `products`.* FROM `products`  WHERE `products`.`id` = 1 LIMIT 1[0m
+  Rendered users/cart.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 66ms (Views: 64.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/basketpositions.css?body=1" for 127.0.0.1 at 2014-12-05 09:52:42 +0100
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-12-05 09:52:42 +0100
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-12-05 09:52:42 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-05 09:52:42 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-05 09:52:42 +0100
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-05 09:52:42 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-05 09:52:42 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-05 09:52:42 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-05 09:52:42 +0100
+
+
+Started GET "/assets/basketpositions.js?body=1" for 127.0.0.1 at 2014-12-05 09:52:42 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-12-05 09:52:42 +0100
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-12-05 09:52:42 +0100
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-05 09:52:42 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-05 09:52:42 +0100
+
+
+Started GET "/products" for 127.0.0.1 at 2014-12-05 09:52:43 +0100
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (4.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 75ms (Views: 72.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2014-12-05 09:52:44 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.5ms)[0m  SELECT  `products`.* FROM `products`  WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProductrelation Load (0.4ms)[0m  [1mSELECT `productrelations`.* FROM `productrelations`  WHERE `productrelations`.`super_id` = 1[0m
+  Rendered products/_quantity.html.erb (2.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1 LIMIT 1
+  Rendered products/_add_to_basket.html.erb (1.8ms)
+  Rendered products/show.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 83ms (Views: 79.8ms | ActiveRecord: 1.3ms)

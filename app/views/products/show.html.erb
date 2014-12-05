@@ -36,11 +36,16 @@
 </p>
 
 <p>
- <strong>Quantity:</strong>
- <%= render 'quantity', :product => @product %>
+<strong>Quantity:</strong>
+<ul>
+  <li><%= @product.name %></li>
+  <%= render 'quantity', :product => @product %>
+</ul>
 </p>
 
+<% if logged_in? %>
 <%= render 'add_to_basket', :product => @product.id %>
+<% end %>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>

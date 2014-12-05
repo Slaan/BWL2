@@ -1,7 +1,7 @@
 <ul>
  <% product.productrelations.each do |relation| %>
    <% subproduct = relation.sub %>
-   <% ausgabe = subproduct.name + " (" + relation.amount.to_s + ")"%>
+   <li><% ausgabe = subproduct.name + " (" + relation.amount.to_s + ")"%></li>
    <%= link_to ausgabe, subproduct %>
    <% unless subproduct.subs.empty? %> 
      <%= render "quantity", :product => subproduct %>
