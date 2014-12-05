@@ -21,6 +21,17 @@ class ProductsController < ApplicationController
   def edit
   end
 
+  def add_to_basket
+     a = Basketposition.create(user_id: params[:basketposition][:user_id], 
+                               product_id: params[:basketposition][:product_id], 
+                               how_many: params[:basketposition][:amount])
+     if a.save
+       redirect_to root_path 
+     else
+       redirect_to Product.find(params[:basketposition][:product_id]), notice: 'Coudln\'nt add product.'
+     end
+  end
+  
   # POST /products
   # POST /products.json
   def create
@@ -61,14 +72,16 @@ class ProductsController < ApplicationController
     end
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_product
-      @product = Product.find(params[:id])
-    end
+ private
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def product_params
-      params.require(:product).permit(:name, :description, :price, :amount, :since, :until, :picture)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_product
+    @product = Product.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def product_params
+    params.require(:product).permit(:name, :description, :price, :amount, :since, :until, :picture)
+  end
+
 end

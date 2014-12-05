@@ -10,11 +10,12 @@
 <body>      
   <h1><%= link_to "Spaceshop", products_path %></h1>
   <div>
-    <%= link_to "Sign up", new_user_path %>
-    <% if not logged_in? %>
+    <% unless logged_in? %>
+      <%= link_to "Sign up", new_user_path %> |
       <%= link_to "Log in", login_path %>
     <% end %>
     <% if logged_in? %>
+      <%= link_to "Cart", cart_path, method: :get %> |
       <%= link_to "Log out", logout_path, method: :delete%>
     <% end %>
     <br>

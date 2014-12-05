@@ -1,0 +1,22 @@
+<h2>Your shoppingcart</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Amount</th>
+      <th>Price/each</th>
+  </thead>
+
+  <tbody>      
+    <% current_user.basketposition.each do |bp| %>
+      <% product = bp.product %>
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= bp.how_many %></td>
+        <td><%= product.price %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

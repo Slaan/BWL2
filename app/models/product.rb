@@ -1,10 +1,14 @@
 class Product < ActiveRecord::Base
 
   # relation between products and other entities
+  # product <-> product 
   has_many :productrelations, foreign_key: "super_id"
   has_many :subs,    :through => :productrelations
   has_many :supers,  :through => :productrelations
-  
+
+  # product <-> user
+  has_many :users,   :through => :basketpositions
+
   # through the paperclip gem we're albe to add images
   # here we decide which format our image has, where it is
   # stored and which url to show im browser
@@ -18,12 +22,7 @@ class Product < ActiveRecord::Base
   # validates makes sure that attributes are
   # present. otherwise our view says that there
   # is something missing :)
-  validates :name, presence: true
-  validates :description, presence: true
-  validates :price, presence: true
-  validates :amount, presence: true
-  validates :since, presence: true
-  validates :since, presence: true
+  validates_presence_of :name, :description, :price, :amount, :since, :until
   validates_attachment_content_type :picture, :content_type => /\Aimage\/.*\Z/
 
   def self.search(product)

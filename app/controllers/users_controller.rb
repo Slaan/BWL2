@@ -17,6 +17,9 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def cart
+  end
+
   # GET /users/1/edit
   def edit
   end
