@@ -20,6 +20,11 @@ class UsersController < ApplicationController
   def cart
   end
 
+  def finish_order
+
+    redirect_to cart_path
+  end
+
   # GET /users/1/edit
   def edit
   end
