@@ -21,7 +21,15 @@ class UsersController < ApplicationController
   end
 
   def finish_order
-
+    # copy all products from basket to order and position
+    order = Order.create(user_id: current_user.id, date: Date.today)
+    current_user.basketposition.each do |position|
+      product = position.product
+      Position.create(order_id: order.id, product_id: product.id, 
+                      amount: position.how_many, price: product.price)
+    end
+    # delete old basket
+    current_user.basketposition.each { |pos| pos.delete }
     redirect_to cart_path
   end
 

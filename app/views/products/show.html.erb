@@ -43,6 +43,16 @@
 </ul>
 </p>
 
+<p>
+  <strong>Arithmetical Middle:</strong>
+  <%= @product.arithmetical_middle %>
+</p>
+
+<p>
+  <strong>Exponentiall flatten:</strong>
+  <%= @product.exponential_smoothing %>
+</p>
+
 <% if logged_in? %>
 <%= render 'add_to_basket', :product => @product.id %>
 <% end %>
