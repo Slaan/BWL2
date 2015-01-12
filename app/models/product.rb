@@ -38,21 +38,35 @@ class Product < ActiveRecord::Base
   end
 
   # arithmetical middle for the last three months
-  def arithmetical_middle(n = 2)
-    months = (0..n).reduce([]) { |accu, elem| 
+  def arithmetical_middle(n = 3)
+    months = (1..n).reduce([]) { |accu, elem| 
       accu << elem.months.ago.month
     }
-    positions.reduce(0) do |accu, elem| 
-      if elem.order.date.month.in?(months) then 
-        accu += elem.amount 
-      else 
-        accu 
-      end
-    end / n
+    need(months) / n
   end
 
-  def exponential_smoothing(alpha = 0.2)
-     
+  # m     - month
+  # alpha - has to be between 0.1 and 0.3
+  def exponential_smoothing(m = 0, alpha = 0.2)
+    if !(0.1 <= alpha && alpha <= 0.3) then
+      raise "alpha isn't between 0.1 and 0.3"
+    end
+    last_month = (m+1).months.ago.month
+    b = need(last_month..last_month)
+    pb = (m == 12) ? 0 : exponential_smoothing(last_month)
+    pb + (alpha * (b - pb))
+  end
+
+ private
+  
+  def need(m)
+    positions.reduce(0) do |accu, pos|
+      if pos.order.date.month.in?(m) then
+        accu += pos.amount
+      else
+        accu
+      end
+    end
   end
 
 end

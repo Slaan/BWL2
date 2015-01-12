@@ -72,6 +72,22 @@ class ProductsController < ApplicationController
     end
   end
 
+  # apriori algorithm
+  # minsupp - minimal support
+  def assosiation(minsupp = 3)
+    # find 1-fi
+    fi_set = Product.all.collect {|p| Set.new [p]}
+    fi_set = fi_set.to_set.reject do |fi|
+      no_of_trans = 0
+      Order.all.each do |t| 
+        if t.products.to_set.superset?(fi) then
+          no_of_trans += 1
+        end
+        no_of_trans < minsupp
+      end
+    end
+  end
+
  private
 
   # Use callbacks to share common setup or constraints between actions.
