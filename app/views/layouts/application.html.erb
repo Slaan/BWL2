@@ -16,6 +16,7 @@
     <% end %>
     <% if logged_in? %>
       <%= link_to "Cart", cart_path, method: :get %> |
+      <%= link_to "Association", assosiation_path, method: :get %> |
       <%= link_to "Log out", logout_path, method: :delete%>
     <% end %>
     <br>

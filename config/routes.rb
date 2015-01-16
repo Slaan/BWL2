@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get     'finish_order'  => 'users#cart'
   get     'signup'        => 'users#new'
   get     'login'         => 'sessions#new'
+  get     'assosiation'   => 'products#assosiation'
   delete  'logout'        => 'sessions#destroy'
   post    'login'         => 'sessions#create'
   post    'products/:id'  => 'products#add_to_basket'

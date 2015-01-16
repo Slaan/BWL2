@@ -1,0 +1,28 @@
+<h1>Assosiation</h1>
+
+<p>
+  <strong>Frequent sets:</strong>
+  <ul>
+  <% @association.each do |frequent| %>
+    <li> {
+    <% frequent.each do |e| %>
+    <%= e.id %> 
+    <% end %>
+    }
+    </li>
+    </br>
+  <% end %>
+  </ul>
+</p>
+
+<p>
+  <strong>Support and confidence:</strong>
+  <table> 
+    <tr>
+    <th>FS</th>
+    <th>Support</th>
+    <th>Confidence</th>
+    </tr>
+    <%= render 'asso', :ass => @association %>
+  </table>
+</p>

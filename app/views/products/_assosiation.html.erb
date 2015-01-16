@@ -1,9 +1,0 @@
-<% # use this partial to show a set of items %>
-<% # e.g. itemset is given  %>
-<% # render "assosiation", :frequent_itemset => itemset %>
-Typical bought together:
-<ul>
-  <% frequent_itemset do |item| %>
-    <li> <%= link_to item.name, item %> </li>
-  <% end %>
-</ul>

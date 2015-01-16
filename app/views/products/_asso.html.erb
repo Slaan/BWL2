@@ -1,0 +1,15 @@
+<% all_sets = Product.all.permutation(2).to_a%>
+<% while not(all_sets.empty?) %>
+  <% fi_set  = all_sets.shift %>
+  <% first   = fi_set.first %>
+  <% second  = fi_set.second %>
+  <tr>
+  <td> 
+    { <%= first.id %>
+      <%= "=>" %>
+      <%= second.id %>
+    }
+  <td> <%= support(Set.new([first]), Set.new([second])) %> </td>
+  <td> <%= confidence(Set.new([first]), Set.new([second])) %> </td>
+  </tr>
+<% end %>

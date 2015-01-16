@@ -1,4 +1,7 @@
 class ProductsController < ApplicationController
+
+  include ProductsHelper
+
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   # GET /products
@@ -10,6 +13,12 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    @association = assosi
+  end
+
+  # GET /products/assosiation
+  def assosiation
+    @association = assosi
   end
 
   # GET /products/new
@@ -23,12 +32,13 @@ class ProductsController < ApplicationController
 
   def add_to_basket
      a = Basketposition.create(user_id: params[:basketposition][:user_id], 
-                               product_id: params[:basketposition][:product_id], 
+                               product_id: params[:basketposition][:product_id],
                                how_many: params[:basketposition][:amount])
      if a.save
        redirect_to root_path 
      else
-       redirect_to Product.find(params[:basketposition][:product_id]), notice: 'Coudln\'nt add product.'
+       redirect_to Product.find(params[:basketposition][:product_id]), 
+                                notice: 'Coudln\'nt add product.'
      end
   end
   
@@ -74,18 +84,35 @@ class ProductsController < ApplicationController
 
   # apriori algorithm
   # minsupp - minimal support
-  def assosiation(minsupp = 3)
-    # find 1-fi
-    fi_set = Product.all.collect {|p| Set.new [p]}
-    fi_set = fi_set.to_set.reject do |fi|
-      no_of_trans = 0
-      Order.all.each do |t| 
-        if t.products.to_set.superset?(fi) then
-          no_of_trans += 1
+  def assosi(minsupp = 2)
+    # create 1-frequent-set
+    c1 = Product.all.permutation(1).to_a
+    l1 = c1.reject { |fi| trans_containing(fi) < minsupp}
+    # find k-frequent-set, first elem is nil because k = 2
+    l = [nil, l1]
+    k = 2
+    c = []
+    while not(l[k-1].empty?)
+      # find candidates
+      b = l[k-1].flatten.to_set.to_a
+      c = b.reduce([]) do |accu, extension|
+        accu + l[k-1].reduce([]) do |accu2, canidate|
+          if not(canidate.include?(extension)) then
+            accu2 << (canidate + [extension])
+          else
+            accu2
+          end
         end
-        no_of_trans < minsupp
       end
+      # remove dubs
+      c = c.collect {|e| e.to_set }.to_set.collect {|e| e.to_a }.to_a
+      # select minsupps
+      l[k] = c.reject { |canidate| trans_containing(canidate) < minsupp }
+      k = k + 1
     end
+    #first elem is nil; last elem is an empty list
+    l.shift; l.pop
+    low_fatten(l)
   end
 
  private
