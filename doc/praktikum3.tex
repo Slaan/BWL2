@@ -1,1 +1,10 @@
 \section{Praktikum 3}
+
+\subsection{Use-Case}
+F\"ur den Use-Case siehe bitte im Anhang.
+
+\subsection{Apriori Algorithmus}
+Der Apriori Algorithmus arbeitet nach dem Bottum-Up Prinzip. Die Strategie ist damit begr\"undet, dass ein Produkt, welches selten vorkommt, nicht h\"aeufiger in Kombinationen auftritt. Man selectiert hierbei nach dem \texttt{minsupp} und \texttt{minconf}. Wobei diese beiden Werte Variabel sind. Der Algorithmus besteht aus drei Abschnitten. Der erste Abschnitt selectiert die Produkte, ohne jegliche Kombination dieser. Anschlie{\ss}end beginnt eine Iteration, in welcher zun\"achst Kandidaten ermittelt werden, welche anschlie{\ss}end auf ihren Support \"uberpr\"uft werden. Abschlie{\ss}end werden die ermittelten und \"uberpr\"uften Kandidaten kombiniert. Dies sind die h\"aufig gekauften Kombinationen.
+
+\subsection{Implementation des Apriori}
+Die Implementation l\"asst sich in unserem Projekt unter \texttt{app/controller/products\_controller.rb} finden. Als Standartwert f\"ur den \texttt{minsupp} ist die 3 gew\"ahlt. Teils sind Funktionen in der Helperklasse \texttt{app/helpers/product\_helper.rb} ausgelagert. Zu diesem z\"ahlen die Funktionen \texttt{support(x, y)} und \texttt{confidence(x, y)}.
