@@ -32,6 +32,8 @@ gem 'paperclip'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# 
+gem 'piwik_analytics', '~> 1.0.1'
 # Use unicorn as the app server
 # gem 'unicorn'
 
